@@ -1,5 +1,5 @@
 const jwt =require('jsonwebtoken');
-const { model } = require('mongoose');
+
 
 
 
@@ -8,6 +8,7 @@ const verifyToken = (req,res,next)=>{
     if (authHeader){
      jwt.verify(token,process.env.JWT_SEC,(err,user)=>{
          if(err){res.status(403).json("not a valid token ")
+         //assign user to the req
           req.user=user;
           next();
         }
@@ -16,4 +17,19 @@ const verifyToken = (req,res,next)=>{
         return res.status(401),json("your not authentication")
     }
 }
-module.exports ={verifyToken}
+const verifyTokenAndAuthorization = (req,res,next)=>{
+    verifyToken(req,res,()=>{
+        if(req.user.id === req.param.id || req.user.isAdmin){
+            next()
+        }else{
+            res.status(403).json("not allowd ")
+        }
+    })
+} 
+
+
+
+
+
+
+module.exports ={verifyToken,verifyTokenAndAuthorization}
