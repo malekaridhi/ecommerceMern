@@ -19,9 +19,23 @@ router.post("/register",async(req,res)=>{
     }
 })
 
-router.post("/login",(req,res)=>{
-    
-})
+router.post("/login",async(req,res)=>{
+try {
+    const user = await User.findOne({username : req.body.username})
+
+    !user && res.status(401).json('no user found')
+
+    const hasdPassword = CryptoJS.DES.decrypt(user.password, process.env.PASS_SEC);
+    const password = hasdPassword.toString(CryptoJS.enc.Utf8)
+
+    password !== req.body.password && res.status(401).json('no user found')
+
+
+      res.status(200).json(user)
+} catch (err) {
+    res.status(500).json(err)
+}
+}) 
 
 
 
