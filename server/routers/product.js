@@ -37,15 +37,15 @@ router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
   });
 
 
-//   //DELETE
-//   router.delete("/:id",verifyTokenAndAuthorization,async (req,res)=>{
-//     try {
-//         await User.findByIdAndDelete(req.params.id)
-//         res.status(200).json("user deleted")
-//     } catch (err) {
-//        res.status(500).json(err)
-//     }
-//   })
+  //DELETE
+  router.delete("/:id",verifyTokenAndAdmin,async (req,res)=>{
+    try {
+        await Product.findByIdAndDelete(req.params.id)
+        res.status(200).json("product deleted")
+    } catch (err) {
+       res.status(500).json(err)
+    }
+  })
 // //GET
 // router.get("/find/:id",verifyTokenAndAdmin,async (req,res)=>{
 //     try {
