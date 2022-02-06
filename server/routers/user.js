@@ -1,9 +1,16 @@
 const express = require('express')
 const router = require("express").Router();
+const User = require ('../models/User')
+const {
+    verifyToken
+} =require('./verifyToken')
 
-// router.get("/usertest",(req,res)=>{
-//     res.send("usertest is a sucess")
-// })
+
+
+router.put('/:id',verifyToken,(req,res)=>{
+
+})
+
 
 
 
