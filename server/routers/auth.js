@@ -9,7 +9,7 @@ router.post("/register", async (req, res) => {
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
-    password: CryptoJS.DES.encrypt(
+    password: CryptoJS.AES.encrypt(
       req.body.password,
       process.env.PASS_SEC
     ).toString(),
@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
 
     !user && res.status(401).json("no user found");
 
-    const hasdPassword = CryptoJS.DES.decrypt(
+    const hasdPassword = CryptoJS.AES.decrypt(
       user.password,
       process.env.PASS_SEC
     );
