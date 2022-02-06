@@ -26,14 +26,14 @@ try {
     !user && res.status(401).json('no user found')
 
     const hasdPassword = CryptoJS.DES.decrypt(user.password, process.env.PASS_SEC);
-    const password = hasdPassword.toString(CryptoJS.enc.Utf8)
+    const originalPassword = hasdPassword.toString(CryptoJS.enc.Utf8)
 
-    password !== req.body.password && res.status(401).json('no user found')
+    originalPassword !== req.body.password && res.status(401).json('no user found')
 
-
-      res.status(200).json(user)
+    const { password, ...others } = user._doc
+      res.status(200).json(others)
 } catch (err) {
-    res.status(500).json(err)
+    console.log(err)
 }
 }) 
 
