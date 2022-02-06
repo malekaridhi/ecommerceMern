@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
-
+const userRoutes = require('./routers/user')
+const cartRoutes = require('./routers/cart')
+const orderRoutes = require('./routers/order')
+const productRoutes = require('./routers/product')
 
 
 
@@ -20,9 +23,10 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-
-
-
+app.use('/api/user', userRoutes);
+app.use('/api/order', orderRoutes);
+app.use('/api/product', userRoutes);
+app.use('/api/cart', userRoutes);
 mongoose.connect(
     process.env.MONGODB_CONNECTION_STRING,
     {
