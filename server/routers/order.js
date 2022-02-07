@@ -77,9 +77,7 @@ router.get('/income',verifyTokenAndAdmin,async(req,res)=>{
             {
                 $match: {
                   createdAt: { $gte: previousMonth },
-                  ...(productId && {
-                    products: { $elemMatch: { productId } },
-                  }),
+                  
                 },
               },
               {
