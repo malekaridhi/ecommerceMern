@@ -42,16 +42,16 @@ const {
       res.status(500).json(err);
     }
   });
-//   //GET USER CART
-//   router.get("/find/:userId", verifyTokenAndAuthorization, async (req, res) => {
-//     try {
-//       const cart = await Cart.findOne({ userId: req.params.userId });
+  //GET USER ORDERS
+  router.get("/find/:userId", verifyTokenAndAuthorization, async (req, res) => {
+    try {
+      const orders = await Order.find({ userId: req.params.userId });
   
-//       res.status(200).json(cart);
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+      res.status(200).json(orders);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 //   // GET ALL
 //   router.get("/",verifyTokenAndAdmin,async(req,res)=>{
 //       try {
