@@ -8,6 +8,7 @@ const cartRoutes = require('./routers/cart')
 const orderRoutes = require('./routers/order')
 const productRoutes = require('./routers/product')
 const authRoutes = require('./routers/auth')
+const stripeRoutes = require('./routers/stripe')
 
 
 
@@ -29,6 +30,8 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/product', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/checkout', stripeRoutes);
+
 mongoose.connect(
     process.env.MONGODB_CONNECTION_STRING,
     {
