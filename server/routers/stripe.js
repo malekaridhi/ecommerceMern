@@ -1,8 +1,9 @@
 const express = require('express');
+require('dotenv').config();
 const { default: Stripe } = require('stripe');
 const router = require("express").Router();
 const KEY = process.env.STRIPE_KEY
-const stripe = require("stripe")(KEY);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 
 
