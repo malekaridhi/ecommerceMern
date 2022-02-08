@@ -1,6 +1,6 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-const key ="pk_test_51JrOvbJBdjDRLoxKFdpAgh83o2B0Rki5O9Mnzm795JkEUWJR3y2b0p4QELr26esDloS3pxRgWE1qbiTVVx2BtQXp00hkIyYYR2"
+
 
 const Pay = () => {
     const onToken = (token) =>{
