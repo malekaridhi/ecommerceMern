@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import styled from 'styled-components';
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
@@ -26,11 +26,13 @@ right:${props=>props.direction ==="right" && "10px"};
 margin: auto;
 cursor:pointer;
 opacity:0.5;
+z-index: 2;
 `
 const Wrapper = styled.div`
 height: 100%;
 display: flex;
 padding: 20px 0px;
+transform:translateX(0vh);
 `
 const Slide = styled.div`
 width: 100vw;
@@ -68,10 +70,15 @@ background-color: transparent;
 cursor: pointer;
 `
 const Slider = () => {
+     const [slideIndex,setSlideIndex]=useState(0)
+    const handleClick=(direction)=>{
+
+    }
+
     return ( 
         <>
          <Container>
-             <Arrow direction="left">
+             <Arrow  direction="left" onClick={()=>handleClick("left")}>
                 <ArrowLeftOutlinedIcon/>
              </Arrow>
              <Wrapper>
@@ -90,7 +97,7 @@ const Slider = () => {
                   <Image src={image} />
               </ImageContainer>
               <InfoContainer>
-                  <Title>ACCESORY SALE</Title>
+                  <Title>ACCESSORY SALE</Title>
                   <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
                   <Button>SHOP NOW</Button>
               </InfoContainer>
@@ -106,7 +113,7 @@ const Slider = () => {
               </InfoContainer>
               </Slide>
              </Wrapper>
-             <Arrow direction="right">
+             <Arrow direction="right" onClick={()=>handleClick("right")}>
                 <ArrowRightOutlinedIcon/>
              </Arrow>
          </Container>
