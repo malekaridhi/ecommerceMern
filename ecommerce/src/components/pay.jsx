@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const key =
   "pk_test_51JrOvbJBdjDRLoxKFdpAgh83o2B0Rki5O9Mnzm795JkEUWJR3y2b0p4QELr26esDloS3pxRgWE1qbiTVVx2BtQXp00hkIyYYR2";
 
 const Pay = () => {
   const [stripeToken, setStripToken] = useState(null);
-
+  const navigate = useNavigate();
   const onToken = (token) => {
     setStripToken(token);
   };
@@ -21,15 +22,19 @@ const Pay = () => {
           }
         );
         console.log(res.data);
+        navigate("/success")
       } catch (err) {
         console.log(err);
       }
     };
     stripeToken && makeRequest();
-  }, [stripeToken]);
+  }, [stripeToken,navigate]);
 
   return (
     <>
+    {stripeToken/(
+        <span>processing. Please wait...</span>
+    )}
       <StripeCheckout
         name="Banana Shop"
         image="https://img2.freepng.fr/20180519/rya/kisspng-logo-phoenix-art-5afffc96998f80.692522331526725782629.jpg"

@@ -5,12 +5,14 @@ import Success from "./components/success";
 function App() {
   return (
    <>
-   <Router>
+   {/* <Router>
    <Routes>  
+   
     <Route exact path="/pay" element={<Pay/>} />
     <Route exact path="/success" element={<Success/>} />
    </Routes>
-   </Router>
+   </Router> */}
+   <div>Hello world</div>
    
    </>
   );
