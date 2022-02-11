@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
-
+import image from "../images/a1.jpg"
 const Container = styled.div`
 width: 100%;
 height:100vh;
 display:flex;
 position: relative;
+overflow: hidden
 `
 const Arrow =styled.div`
 width: 50px;
@@ -27,20 +28,44 @@ cursor:pointer;
 opacity:0.5;
 `
 const Wrapper = styled.div`
-height:100%;
+height: 100%;
+display: flex;
+padding: 20px 0px;
 `
-const slide = styled.div`
-display:flex;
-align-items:center;
+const Slide = styled.div`
+width: 100vw;
+height: 100vh;
+display: flex;
+align-items: center;
+
+background-color: #${(props) => props.bg};
 `
 const ImageContainer = styled.div`
-flex:1;
+height: 100%;
+flex: 1;
 `
-const Image =styled.image`
-
+const Image =styled.img`
+height: 80%;
+margin :30px;
 `
 const InfoContainer = styled.div`
 flex:1;
+padding: 50px
+`
+const Title = styled.h1`
+font-size: 70px;
+`
+const Desc =styled.p`
+margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`
+const Button = styled.button`
+padding: 10px;
+font-size: 20px;
+background-color: transparent;
+cursor: pointer;
 `
 const Slider = () => {
     return ( 
@@ -50,10 +75,36 @@ const Slider = () => {
                 <ArrowLeftOutlinedIcon/>
              </Arrow>
              <Wrapper>
+                 <Slide bg="f5fafd">
               <ImageContainer>
-                  <Image />
+                  <Image src={image} />
               </ImageContainer>
-              <InfoContainer></InfoContainer>
+              <InfoContainer>
+                  <Title>SPRING SALE</Title>
+                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
+                  <Button>SHOP NOW</Button>
+              </InfoContainer>
+              </Slide>
+              <Slide bg="fcfled">
+              <ImageContainer>
+                  <Image src={image} />
+              </ImageContainer>
+              <InfoContainer>
+                  <Title>ACCESORY SALE</Title>
+                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
+                  <Button>SHOP NOW</Button>
+              </InfoContainer>
+              </Slide>
+              <Slide  bg="fbf0f4">
+              <ImageContainer>
+                  <Image src={image} />
+              </ImageContainer>
+              <InfoContainer>
+                  <Title>WINTER SALE</Title>
+                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
+                  <Button>SHOP NOW</Button>
+              </InfoContainer>
+              </Slide>
              </Wrapper>
              <Arrow direction="right">
                 <ArrowRightOutlinedIcon/>
