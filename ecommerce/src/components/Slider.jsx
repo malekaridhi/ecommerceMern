@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import image from "../images/a1.jpg"
+import {sliderItems} from "../data"
 const Container = styled.div`
 width: 100%;
 height:100vh;
@@ -32,7 +33,8 @@ const Wrapper = styled.div`
 height: 100%;
 display: flex;
 padding: 20px 0px;
-transform:translateX(0vh);
+transition: all 1.5s ease;
+transform:translateX(${props=>props.slideIndex * -100}vw);
 `
 const Slide = styled.div`
 width: 100vw;
@@ -72,7 +74,11 @@ cursor: pointer;
 const Slider = () => {
      const [slideIndex,setSlideIndex]=useState(0)
     const handleClick=(direction)=>{
-
+      if(direction==="left"){
+          setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+      }else{
+          setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0)
+      }
     }
 
     return ( 
@@ -81,37 +87,19 @@ const Slider = () => {
              <Arrow  direction="left" onClick={()=>handleClick("left")}>
                 <ArrowLeftOutlinedIcon/>
              </Arrow>
-             <Wrapper>
-                 <Slide bg="f5fafd">
+             <Wrapper slideIndex={slideIndex}>
+                 {sliderItems.map(item=>(
+                 <Slide bg={item.bg}>
               <ImageContainer>
-                  <Image src={image} />
+                  <Image src={item.img} />
               </ImageContainer>
               <InfoContainer>
-                  <Title>SPRING SALE</Title>
-                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
+                  <Title>{item.title}</Title>
+                  <Desc>{item.desc}</Desc>
                   <Button>SHOP NOW</Button>
               </InfoContainer>
               </Slide>
-              <Slide bg="fcfled">
-              <ImageContainer>
-                  <Image src={image} />
-              </ImageContainer>
-              <InfoContainer>
-                  <Title>ACCESSORY SALE</Title>
-                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
-                  <Button>SHOP NOW</Button>
-              </InfoContainer>
-              </Slide>
-              <Slide  bg="fbf0f4">
-              <ImageContainer>
-                  <Image src={image} />
-              </ImageContainer>
-              <InfoContainer>
-                  <Title>WINTER SALE</Title>
-                  <Desc>BE THE STYLE YOU DISIRE !! GET 30% OFF FOR NEW COLLECTION </Desc>
-                  <Button>SHOP NOW</Button>
-              </InfoContainer>
-              </Slide>
+             ))}
              </Wrapper>
              <Arrow direction="right" onClick={()=>handleClick("right")}>
                 <ArrowRightOutlinedIcon/>
