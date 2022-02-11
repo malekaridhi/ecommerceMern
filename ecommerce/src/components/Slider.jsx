@@ -23,6 +23,24 @@ bottom:0;
 left:${props=>props.direction ==="left" && "10px"};
 right:${props=>props.direction ==="right" && "10px"};
 margin: auto;
+cursor:pointer;
+opacity:0.5;
+`
+const Wrapper = styled.div`
+height:100%;
+`
+const slide = styled.div`
+display:flex;
+align-items:center;
+`
+const ImageContainer = styled.div`
+flex:1;
+`
+const Image =styled.image`
+
+`
+const InfoContainer = styled.div`
+flex:1;
 `
 const Slider = () => {
     return ( 
@@ -31,6 +49,9 @@ const Slider = () => {
              <Arrow direction="left">
                 <ArrowLeftOutlinedIcon/>
              </Arrow>
+             <Wrapper>
+
+             </Wrapper>
              <Arrow direction="right">
                 <ArrowRightOutlinedIcon/>
              </Arrow>
