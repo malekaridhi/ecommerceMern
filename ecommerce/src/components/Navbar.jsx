@@ -1,24 +1,35 @@
 import React from "react";
-import styed from "styled-components";
-const Container = styed.div`
+import styled from "styled-components";
+import SearchIcon from '@mui/icons-material/Search';
+const Container = styled.div`
 height :60px;
 `;
-const Wrapper = styed.div`
+const Wrapper = styled.div`
 padding: 10px 20px;
 display: flex;
+align-items: center;
 justify-content: space-between;
 `;
-const Left = styed.div`
+const Left = styled.div`
 flex:1;
+display: flex;
+align-items: center;
 `;
-const Language =styed.span`
+const Language =styled.span`
 font-size: 10px;
 cursor: pointer;
 `
-const Center = styed.div`
+const SearchContainer = styled.div`
+border: 0.5px solid lightgray;
+display: flex;
+align-items: center;
+margin-left: 25px;
+padding: 5px
+`
+const Center = styled.div`
 flex:1;
 `;
-const Right = styed.div`
+const Right = styled.div`
 flex:1;
 `;
 
@@ -31,6 +42,7 @@ const Navbar = () => {
               <Language>EN</Language>
               <SearchContainer>
                   input
+                  <SearchIcon/>
               </SearchContainer>
           </Left>
           <Center>Center</Center>
