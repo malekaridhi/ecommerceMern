@@ -13,7 +13,7 @@ flex:1;
 `;
 const Language =styed.span`
 font-size: 10px;
-currsor: pointer;
+cursor: pointer;
 `
 const Center = styed.div`
 flex:1;
@@ -27,7 +27,12 @@ const Navbar = () => {
     <>
       <Container>
         <Wrapper>
-          <Left>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo maiores deleniti architecto placeat fugit ut corporis officia pariatur laborum eos aut velit id quas, ab voluptatibus voluptatem sapiente soluta blanditiis?</Left>
+          <Left>
+              <Language>EN</Language>
+              <SearchContainer>
+                  input
+              </SearchContainer>
+          </Left>
           <Center>Center</Center>
           <Right>Right</Right>
         </Wrapper>
