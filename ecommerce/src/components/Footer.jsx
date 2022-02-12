@@ -54,6 +54,10 @@ const ListItem = styled.li`
  width:50%;
  margin-bottom:10px;
 `;
+const ContactItem = styled.div`
+ width:50%;
+ margin-bottom:10px;
+`;
 
 const Footer = () => {
   return (
@@ -99,6 +103,9 @@ const Footer = () => {
         </Center>
         <Right>
             <Title>Contact</Title>
+            <ContactItem>Tunis,Tunisia</ContactItem>
+            <ContactItem>+216 111111111</ContactItem>
+            <ContactItem>contact@banana.com</ContactItem>
         </Right>
       </Container>
     </>
