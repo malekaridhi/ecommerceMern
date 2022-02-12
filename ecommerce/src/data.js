@@ -14,6 +14,10 @@ import image12 from "./images/c5.jpg"
 import image13 from "./images/c7.jpg"
 import image14 from "./images/c6.jpg"
 import image15 from "./images/c8.jpg"
+import image16 from "./images/c9.jpg"
+import image17 from "./images/c10.jpg"
+import image18 from "./images/c11.jpg"
+import image19 from "./images/c12.jpg"
 export const sliderItems = [
     {
       id: 1,
@@ -90,5 +94,21 @@ export const sliderItems = [
     {
       id:8,
       img:image15,
+    },
+    {
+      id:9,
+      img:image16,
+    },
+    {
+      id:10,
+      img:image17,
+    },
+    {
+      id:11,
+      img:image18,
+    },
+    {
+      id:12,
+      img:image19,
     },
   ]
