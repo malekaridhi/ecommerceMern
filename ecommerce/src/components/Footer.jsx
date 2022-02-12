@@ -4,16 +4,21 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import RoomIcon from '@mui/icons-material/Room';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 const Container = styled.div`
   display: flex;
 `;
 const Left = styled.div`
-flex:1;
-sisplay:flex;
+flex: 1;
+display: flex;
 flex-direction: column;
 padding: 20px;
 `;
-const Logo = styled.h1``;
+const Logo = styled.h1`
+color:#f2be00;
+`;
 const Desc = styled.p`
   margin: 20px 0px;
 `;
@@ -34,6 +39,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  
 `;
 const Right = styled.div`
   flex: 1;
@@ -41,22 +47,28 @@ const Right = styled.div`
 `;
 const Title = styled.h3`
 margin-bottom: 30px;
+color:#f2be00;
 
 `;
 const List = styled.ul`
-margin:0;
-padding:0;
-list-style:none;
-display:flex;
-flex-wrap:wrap;
+margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 `;
 const ListItem = styled.li`
  width:50%;
  margin-bottom:10px;
 `;
 const ContactItem = styled.div`
+ margin-bottom:20px;
+ display:flex;
+ align-items:center;
+ jutify-content:center;
+`;
+const Payment = styled.img`
  width:50%;
- margin-bottom:10px;
 `;
 
 const Footer = () => {
@@ -103,9 +115,10 @@ const Footer = () => {
         </Center>
         <Right>
             <Title>Contact</Title>
-            <ContactItem>Tunis,Tunisia</ContactItem>
-            <ContactItem>+216 111111111</ContactItem>
-            <ContactItem>contact@banana.com</ContactItem>
+            <ContactItem> <RoomIcon style={{marginRight:"10px"}}/> Tunis,Tunisia</ContactItem>
+            <ContactItem> <LocalPhoneIcon style={{marginRight:"10px"}}/> +216 111111111</ContactItem>
+            <ContactItem><MailOutlineIcon style={{marginRight:"10px"}}/> contact@banana.tn</ContactItem>
+            <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
         </Right>
       </Container>
     </>

@@ -63,7 +63,7 @@ const Navbar = () => {
                   <SearchIcon style={{color:"gray",fontSize:16}}/>
               </SearchContainer>
           </Left>
-          <Center><Logo>BANANA</Logo></Center>
+          <Center><Logo>BANANA.</Logo></Center>
           <Right>
               <MenuItem>REGISTER</MenuItem>
               <MenuItem>SIGN IN</MenuItem>
