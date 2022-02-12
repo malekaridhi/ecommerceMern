@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SendIcon from '@mui/icons-material/Send';
 const Container = styled.div`
- height: 60vh;
+ height: 40vh;
  background-color: #f5fafd;
  display: flex;
  align-items: center;
@@ -34,6 +34,9 @@ padding-left:20px;
 `
 const Button = styled.button`
 flex:1;
+border:none;
+color:white;
+background-color: #FFDAB9;
 `
 
 const NewsLetter = () => {
