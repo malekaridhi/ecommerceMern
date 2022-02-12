@@ -5,7 +5,15 @@ import image3 from "./images/a3.jpg"
 import image4 from "./images/a4.jpg"
 import image5 from "./images/b1.jpg"
 import image6 from "./images/b2.jpg"
-import image7 from "./images/b3.jpg"
+import image7 from "./images/b4.jpg"
+import image8 from "./images/c4.jpg"
+import image9 from "./images/c1.jpg"
+import image10 from "./images/c3.jpg"
+import image11 from "./images/c2.jpg"
+import image12 from "./images/c5.jpg"
+import image13 from "./images/c7.jpg"
+import image14 from "./images/c6.jpg"
+import image15 from "./images/c8.jpg"
 export const sliderItems = [
     {
       id: 1,
@@ -50,3 +58,37 @@ export const sliderItems = [
       cat:"women"
     },
   ];
+  export const popularProducts = [
+    {
+      id:1,
+      img:image8,
+    },
+    {
+      id:2,
+      img:image9,
+    },
+    {
+      id:3,
+      img: image10,
+    },
+    {
+      id:4,
+      img:image11,
+    },
+    {
+      id:5,
+      img:image12,
+    },
+    {
+      id:6,
+      img:image13,
+    },
+    {
+      id:7,
+      img:image14,
+    },
+    {
+      id:8,
+      img:image15,
+    },
+  ]
