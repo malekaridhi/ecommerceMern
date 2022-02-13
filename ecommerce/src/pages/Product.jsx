@@ -36,7 +36,11 @@ const Price = styled.span`
 font-weight:200;
 font-size:40px
 `;
-const FilterContainer = styled.div``
+const FilterContainer = styled.div`
+display: flex;
+justify-content: space-between;
+
+`
 const Filter = styled.div``
 const FilterTitle = styled.span``
 const FilterColor = styled.div``
@@ -71,6 +75,7 @@ const Product = () => {
                     <FilterColor color="black"></FilterColor>
                     <FilterColor color="darkblue"></FilterColor>
                     <FilterColor color="gray"></FilterColor>
+                    </Filter>
                 <Filter>
                     <FilterTitle>Size</FilterTitle>
                     <FilterSize>
@@ -82,7 +87,7 @@ const Product = () => {
                         <FilterSizeOption>XXXL</FilterSizeOption>
                     </FilterSize>
                 </Filter>    
-                </Filter>
+               
             </FilterContainer>
           </InfoContainer>
         </Wrapper>
