@@ -37,11 +37,16 @@ font-weight:200;
 font-size:40px
 `;
 const FilterContainer = styled.div`
+width: 50%;
+margin: 30px 0px;
 display: flex;
 justify-content: space-between;
 
 `
-const Filter = styled.div``
+const Filter = styled.div`
+display: flex;
+align-items: center;
+`
 const FilterTitle = styled.span``
 const FilterColor = styled.div``
 const FilterSize = styled.select``
