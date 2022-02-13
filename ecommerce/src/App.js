@@ -5,6 +5,7 @@ import Success from "./components/success";
 import Home from "./pages/Home"
 import PoductList from "./pages/ProductList";
 import Product from "./pages/Product";
+import Register from "./pages/Register";
 function App() {
   return (
    <>
@@ -16,7 +17,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <Product/>
+  <Register/>
    
    </>
   );
