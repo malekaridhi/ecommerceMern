@@ -6,6 +6,8 @@ import Products from "../components/Products";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import image from "../images/c2.jpg"
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 const Container = styled.div``;
 const Wrapper = styled.div`
 padding:50px;
@@ -60,7 +62,10 @@ background-color: ${(props) => props.color};
 margin: 0px 5px;
 cursor: pointer;
 `
-const FilterSize = styled.select``
+const FilterSize = styled.select`
+margin-left: 10px;
+paddig: 5px;
+`
 const FilterSizeOption = styled.option``
 const AddContainer = styled.div``
 const AmountContainer = styled.div``
@@ -105,6 +110,14 @@ const Product = () => {
                 </Filter>    
                
             </FilterContainer>
+            <AddContainer>
+                <AmountContainer>
+                    <RemoveIcon/>
+                    <Amount>1</Amount>
+                    <AddIcon/>
+                </AmountContainer>
+                <Button> ADD TO CART </Button>
+            </AddContainer>
           </InfoContainer>
         </Wrapper>
         
