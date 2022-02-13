@@ -68,10 +68,16 @@ paddig: 5px;
 `
 const FilterSizeOption = styled.option``
 const AddContainer = styled.div`
+width: 50%;
 display: flex;
 align-items: center;
+justify-content: space-between;
 `
-const AmountContainer = styled.div``
+const AmountContainer = styled.div`
+display: flex;
+align-items: center;
+font-weight:200;
+`
 const Amount = styled.span``
 const Button = styled.button``
 const Product = () => {
