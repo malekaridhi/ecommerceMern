@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import PoductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 function App() {
   return (
    <>
@@ -17,7 +18,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <Register/>
+  <Login/>
    
    </>
   );
