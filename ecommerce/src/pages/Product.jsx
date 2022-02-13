@@ -36,7 +36,16 @@ const Price = styled.span`
 font-weight:200;
 font-size:40px
 `;
-
+const FilterContainer = styled.div``
+const Filter = styled.div``
+const FilterTitle = styled.span``
+const FilterColor = styled.div``
+const FilterSize = styled.select``
+const FilterSizeOption = styled.option``
+const AddContainer = styled.div``
+const AmountContainer = styled.div``
+const Amount = styled.span``
+const Button = styled.button``
 const Product = () => {
   return (
     <>
