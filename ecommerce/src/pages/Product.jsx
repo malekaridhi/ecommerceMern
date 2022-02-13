@@ -82,7 +82,7 @@ const Amount = styled.span`
 width: 30px;
 height:30px;
 border-radius:5px;
-border: 1px solid #17a6b0;
+border: 2px solid #FFDAB9;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -90,8 +90,14 @@ margin: 0px 5px
 `
 const Button = styled.button`
 padding: 15px;
-border: 1px solid #17a6b0;
+border: 2px solid #FFDAB9;
 background-color: white;
+cursor: pointer;
+font-weight:500;
+//border-radius:40px;
+&:hover{
+    background-color: #f5fafd; 
+}
 `
 const Product = () => {
   return (
