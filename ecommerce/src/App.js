@@ -4,6 +4,7 @@ import Pay from "./components/pay"
 import Success from "./components/success";
 import Home from "./pages/Home"
 import PoductList from "./pages/ProductList";
+import Product from "./pages/Product";
 function App() {
   return (
    <>
@@ -15,7 +16,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <PoductList/>
+  <Product/>
    
    </>
   );
