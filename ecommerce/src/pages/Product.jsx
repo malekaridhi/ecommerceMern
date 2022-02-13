@@ -65,6 +65,25 @@ const Product = () => {
               adipisci placeat, facilis atque.
             </Desc>
             <Price>300 DT</Price>
+            <FilterContainer>
+                <Filter>
+                    <FilterTitle>Color</FilterTitle>
+                    <FilterColor color="black"></FilterColor>
+                    <FilterColor color="darkblue"></FilterColor>
+                    <FilterColor color="gray"></FilterColor>
+                <Filter>
+                    <FilterTitle>Size</FilterTitle>
+                    <FilterSize>
+                        <FilterSizeOption>XS</FilterSizeOption>
+                        <FilterSizeOption>S</FilterSizeOption>
+                        <FilterSizeOption>M</FilterSizeOption>
+                        <FilterSizeOption>XL</FilterSizeOption>
+                        <FilterSizeOption>XXL</FilterSizeOption>
+                        <FilterSizeOption>XXXL</FilterSizeOption>
+                    </FilterSize>
+                </Filter>    
+                </Filter>
+            </FilterContainer>
           </InfoContainer>
         </Wrapper>
         
