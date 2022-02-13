@@ -67,7 +67,10 @@ margin-left: 10px;
 paddig: 5px;
 `
 const FilterSizeOption = styled.option``
-const AddContainer = styled.div``
+const AddContainer = styled.div`
+display: flex;
+align-items: center;
+`
 const AmountContainer = styled.div``
 const Amount = styled.span``
 const Button = styled.button``
