@@ -47,8 +47,19 @@ const Filter = styled.div`
 display: flex;
 align-items: center;
 `
-const FilterTitle = styled.span``
-const FilterColor = styled.div``
+const FilterTitle = styled.span`
+font-size:20px;
+font-weight:200;
+ 
+`
+const FilterColor = styled.div`
+width: 20px;
+height:20px;
+border-radius:50%;
+background-color: ${(props) => props.color};
+margin: 0px 5px;
+cursor: pointer;
+`
 const FilterSize = styled.select``
 const FilterSizeOption = styled.option``
 const AddContainer = styled.div``
@@ -66,7 +77,7 @@ const Product = () => {
             <Image src={image} />
           </ImageContainer>
           <InfoContainer>
-            <Title> Black Mini Dress </Title>
+            <Title>  Mini Dress </Title>
             <Desc>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error et
               sunt doloribus sed nam ex dolore laudantium eos dolorem a
