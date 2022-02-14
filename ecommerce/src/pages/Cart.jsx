@@ -1,13 +1,34 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
+const container = styled.div``;
+const Wrapper = styled.div``;
+const Title = styled.h1``;
+const Top = styled.div``;
+const TopButton = styled.button``;
+const TopTexts = styled.div``;
+const topText = styled.span``;
+const Bottom = styled.div``;
+const Info = styled.div``;
+const Product = styled.div``;
+const PrudctDetail = styled.div``;
+const Image = styled.img``;
+const Detail = styled.div``;
+const ProductName = styled.span``;
+const ProductId = styled.span``;
+const ProductColor = styled.div``;
+const ProductSize = styled.span``;
+const PriceDetail = styled.div``;
+const ProductAmountContainer = styled.div``;
+const ProductAmount = styled.div``;
+const ProductPrice = styled.div``;
+const Hr = styled.hr``;
+const summaryItem = styled.div``;
+const summaryItemText = styled.span``;
+const summaryItemPrice = styled.span``;
+const Button = styled.button``;
 const Cart = () => {
-    return ( 
-        <>
-        <
-        </>
-     );
-}
- 
-export default Cart;
-<>
+  return <></>;
+};
 
-</>
+export default Cart;
+<></>;
