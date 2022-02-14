@@ -1,1 +1,2 @@
-# ecommerceMern
+# Banana Shop
+MERN
