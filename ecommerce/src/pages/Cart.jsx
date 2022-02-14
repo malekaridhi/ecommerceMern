@@ -101,8 +101,13 @@ background-color: #eee;
 `;
 const Summary = styled.div`
 flex:1;
+border: 0.5px solid lightgray';
+border-radius: 10px;
+padding: 20px;
 `;
-const SummaryTitle = styled.h1``
+const SummaryTitle = styled.h1`
+
+`
 const summaryItem = styled.div``;
 const summaryItemText = styled.span``;
 const summaryItemPrice = styled.span``;
@@ -156,20 +161,21 @@ const Cart = () => {
                     <SummaryTitle> ORDER SUMMARY </SummaryTitle>
                     <summaryItem>
                         <summaryItemText>Subtotal</summaryItemText>
-                        <summaryItemPrice></summaryItemPrice>
+                        <summaryItemPrice>130 DT</summaryItemPrice>
                     </summaryItem>
                     <summaryItem>
-                        <summaryItemText></summaryItemText>
-                        <summaryItemPrice></summaryItemPrice>
+                        <summaryItemText>Estimated Shipping</summaryItemText>
+                        <summaryItemPrice>20 DT</summaryItemPrice>
                     </summaryItem>
                     <summaryItem>
-                        <summaryItemText></summaryItemText>
-                        <summaryItemPrice></summaryItemPrice>
+                        <summaryItemText>Shipping Discount</summaryItemText>
+                        <summaryItemPrice>-20 DT</summaryItemPrice>
                     </summaryItem>
                     <summaryItem>
-                        <summaryItemText></summaryItemText>
-                        <summaryItemPrice></summaryItemPrice>
+                        <summaryItemText type='total'>Total</summaryItemText>
+                        <summaryItemPrice>130 DT</summaryItemPrice>
                     </summaryItem>
+                    <Button>CHECKOUT NOW</Button>
                 </Summary>
             </Bottom>
         </Wrapper>
