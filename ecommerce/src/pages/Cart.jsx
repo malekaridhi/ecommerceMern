@@ -57,6 +57,7 @@ display:flex;
 `;
 const Image = styled.img`
 width:200px;
+
 `;
 const Detail = styled.div`
 padding: 20px;
@@ -74,13 +75,30 @@ background-color: ${(props) => props.color};
 `;
 const ProductSize = styled.span``;
 const PriceDetail = styled.div`
-flex:1;
-display:flex;
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 `;
-const ProductAmountContainer = styled.div``;
-const ProductAmount = styled.div``;
-const ProductPrice = styled.div``;
-const Hr = styled.hr``;
+const ProductAmountContainer = styled.div`
+display:flex;
+align-items: center;
+margin-bottom: 20px;
+`;
+const ProductAmount = styled.div`
+font-size: 24px;
+margin: 5px;
+`;
+const ProductPrice = styled.div`
+font-size: 30px;
+  font-weight: 200;
+`;
+const Hr = styled.hr`
+background-color: #eee;
+  border: none;
+  height: 1px;
+`;
 const Summary = styled.div`
 flex:1;
 `;
@@ -123,11 +141,11 @@ const Cart = () => {
                         <PriceDetail>
                             <ProductAmountContainer>
                                 <AddIcon/>
-                                <ProductAmount></ProductAmount>
+                                <ProductAmount>1</ProductAmount>
                                 <RemoveIcon/>  
                             </ProductAmountContainer>
                             <ProductPrice>
-
+                                     120DT
                             </ProductPrice>
                         </PriceDetail>
                     </Product>
