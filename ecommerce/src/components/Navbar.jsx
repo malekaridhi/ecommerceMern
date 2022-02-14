@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import Stack from '@mui/material/Stack';
 import MailIcon from '@mui/icons-material/Mail';
+import Image from '../images/logo4.png'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Container = styled.div`
 height :60px;
@@ -37,8 +38,9 @@ const Center = styled.div`
 flex:1;
 text-align: center;
 `;
-const Logo = styled.h1`
+const Logo = styled.img`
   font-weight:bold;
+  width: 30%;
 `
 const Right = styled.div`
 flex:1;
@@ -63,7 +65,7 @@ const Navbar = () => {
                   <SearchIcon style={{color:"gray",fontSize:16}}/>
               </SearchContainer>
           </Left>
-          <Center><Logo>BANANA.</Logo></Center>
+          <Center><Logo src={Image}/></Center>
           <Right>
               <MenuItem>REGISTER</MenuItem>
               <MenuItem>SIGN IN</MenuItem>

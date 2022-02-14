@@ -15,7 +15,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Wrapper = styled.div`
-width: 40%;
+width: 25%;
 padding:20px;
 background-color:white;
 
@@ -32,14 +32,11 @@ flex-direction: column;
 `;
 const Input = styled.input`
 flex: 1;
-min-width: 25%;
-margin: 20px 10px 0px 0px;
+min-width: 40%;
+margin: 10px  0px;
 padding: 10px;
 `;
-const Agreement = styled.span`
-font-size: 12px;
-margin: 20px 0px;
-`;
+
 const Button = styled.button`
 width: 100%;
 border: none;
@@ -48,7 +45,12 @@ background-color: #f58840;
 color: white;
 cursor: pointer;
 `;
-const Link = styled.a``;
+const Link = styled.a`
+margin: 5px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+`;
 const Error = styled.span``;
 const Login = () => {
   return (
