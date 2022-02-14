@@ -56,7 +56,7 @@ flex:2;
 display:flex;
 `;
 const Image = styled.img`
-width:200px;
+width:160px;
 
 `;
 const Detail = styled.div`
@@ -150,11 +150,12 @@ const Cart = () => {
                         </PriceDetail>
                     </Product>
                     <Hr/>
+                    
                 </Info>
                 <Summary>
-                    <SummaryTitle></SummaryTitle>
+                    <SummaryTitle> ORDER SUMMARY </SummaryTitle>
                     <summaryItem>
-                        <summaryItemText></summaryItemText>
+                        <summaryItemText>Subtotal</summaryItemText>
                         <summaryItemPrice></summaryItemPrice>
                     </summaryItem>
                     <summaryItem>
