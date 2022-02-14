@@ -5,6 +5,7 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import image from "../images/c6.jpg"
 const Container = styled.div`
 
 `
@@ -39,22 +40,50 @@ cursor: pointer;
 margin: 0px 10px;
 `;
 const Bottom = styled.div`
+display:flex;
+justify-content: space-between;
 `;
-const Info = styled.div``;
-const Product = styled.div``;
-const ProdcutDetail = styled.div``;
-const Image = styled.img``;
-const Detail = styled.div``;
+const Info = styled.div`
+flex:3;
+
+`;
+const Product = styled.div`
+display:flex;
+justify-content: space-between;
+`;
+const ProdcutDetail = styled.div`
+flex:2;
+display:flex;
+`;
+const Image = styled.img`
+width:200px;
+`;
+const Detail = styled.div`
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+`;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
-const ProductColor = styled.div``;
+const ProductColor = styled.div`
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: ${(props) => props.color};
+`;
 const ProductSize = styled.span``;
-const PriceDetail = styled.div``;
+const PriceDetail = styled.div`
+flex:1;
+display:flex;
+`;
 const ProductAmountContainer = styled.div``;
 const ProductAmount = styled.div``;
 const ProductPrice = styled.div``;
 const Hr = styled.hr``;
-const Summary = styled.div``;
+const Summary = styled.div`
+flex:1;
+`;
 const SummaryTitle = styled.h1``
 const summaryItem = styled.div``;
 const summaryItemText = styled.span``;
@@ -83,12 +112,12 @@ const Cart = () => {
                 <Info>
                     <Product>
                         <ProdcutDetail>
-                            <Image/>
+                            <Image src={image}/>
                             <Detail>
-                                <ProductName></ProductName>
-                                <ProductId></ProductId>
-                                <ProductColor></ProductColor>
-                                <ProductSize></ProductSize>
+                                <ProductName> <b>Product:</b> SPORTWEAR LONG SLEEVE </ProductName>
+                                <ProductId><b>ID:</b>75399521147</ProductId>
+                                <ProductColor color="grey"/>
+                                <ProductSize><b>Size:</b>36</ProductSize>
                             </Detail>
                         </ProdcutDetail>
                         <PriceDetail>
