@@ -63,23 +63,39 @@ const Detail = styled.div`
 padding: 20px;
 display: flex;
 flex-direction: column;
-justify-content: space-around;
+// justify-content: space-around;
+
 `;
-const ProductName = styled.span``;
+const ProductName = styled.span`
+font-size:30px;
+`;
 const ProductId = styled.span``;
 const ProductColor = styled.div`
 width: 20px;
 height: 20px;
 border-radius: 50%;
 background-color: ${(props) => props.color};
+margin-top:20px;
 `;
-const ProductSize = styled.span``;
+const SizeName =styled.span`
+margin-right: 20px;
+font-size:30px;
+font-weight: 600;
+`
+const SizeValue =styled.span`
+
+`
+const ProductSize = styled.div`
+margin-top:20px;
+display:flex;
+`;
 const PriceDetail = styled.div`
 flex: 1;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
 `;
 const ProductAmountContainer = styled.div`
 display:flex;
@@ -116,11 +132,17 @@ margin: 30px 0px;
 display:flex;
 justify-content: space-between;
 font-weight: ${(props) => props.type === "total" && "500"};
-  font-size: ${(props) => props.type === "total" && "24px"};
+font-size: ${(props) => props.type === "total" && "24px"};
 `
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
-const Button = styled.button``;
+const Button = styled.button`
+width: 100%;
+padding: 10px;
+background-color: black;
+color: white;
+font-weight: 600;
+`;
 
 const Cart = () => {
     return ( 
@@ -146,10 +168,13 @@ const Cart = () => {
                         <ProdcutDetail>
                             <Image src={image}/>
                             <Detail>
-                                <ProductName> <b>Product:</b> SPORTWEAR LONG SLEEVE </ProductName>
-                                <ProductId><b>ID:</b>75399521147</ProductId>
+                                <ProductName>SPORTWEAR LONG SLEEVE </ProductName>
+                                {/* <ProductId><b>ID:</b>75399521147</ProductId> */}
+                                <ProductSize>
+                                <SizeName>Size</SizeName>
+                                <SizeValue>36</SizeValue>
+                                </ProductSize>
                                 <ProductColor color="grey"/>
-                                <ProductSize><b>Size:</b>36</ProductSize>
                             </Detail>
                         </ProdcutDetail>
                         <PriceDetail>
@@ -180,8 +205,8 @@ const Cart = () => {
                         <SummaryItemText>Shipping Discount</SummaryItemText>
                         <SummaryItemPrice>-20 DT</SummaryItemPrice>
                     </SummaryItem>
-                    <SummaryItem>
-                        <SummaryItemText type='total'>Total</SummaryItemText>
+                    <SummaryItem type='total'>
+                        <SummaryItemText >Total</SummaryItemText>
                         <SummaryItemPrice>130 DT</SummaryItemPrice>
                     </SummaryItem>
                     <Button>CHECKOUT NOW</Button>
