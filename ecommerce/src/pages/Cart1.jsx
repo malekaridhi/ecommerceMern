@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import Navbar from '../components/Navbar';
-import Announcement from '../components/Announcement';
-import Footer from '../components/Footer';
+import Navbar from '../components/Navbar'
+import Announcement from '../components/Announcement'
+import Footer from '../components/Footer'
+
 const Container = styled.div`
 
-`
+`;
 const Wrapper = styled.div``;
 const Title = styled.h1``;
 const Top = styled.div``;
@@ -31,19 +32,17 @@ const summaryItem = styled.div``;
 const summaryItemText = styled.span``;
 const summaryItemPrice = styled.span``;
 const Button = styled.button``;
-
 const Cart = () => {
-    return ( 
-
-        <>
-        <Container>
-        <Announcement/>
+  return 
+  <>
+  <Container>
+       <Announcement/>
         <Navbar/>
         cart 
        <Footer/>
-        </Container>
-        </>
-     );
-}
- 
+  </Container>
+  </>;
+};
+
 export default Cart;
+<></>;
