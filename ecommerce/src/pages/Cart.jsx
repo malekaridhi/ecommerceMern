@@ -59,12 +59,12 @@ const Cart = () => {
         <Wrapper>
             <Title>YOUR BAG</Title>
             <Top>
-                <TopButton></TopButton>
+                <TopButton>CONTINUE SHOPPING</TopButton>
                     <TopTexts>
                        <TopText></TopText>
                        <TopText></TopText>
                     </TopTexts>
-                <TopButton></TopButton>
+                <TopButton>CHECKOUT nOW</TopButton>
                 
             </Top>
             <Bottom>
