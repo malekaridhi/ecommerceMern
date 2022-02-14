@@ -8,10 +8,23 @@ import RemoveIcon from '@mui/icons-material/Remove';
 const Container = styled.div`
 
 `
-const Wrapper = styled.div``;
-const Title = styled.h1``;
-const Top = styled.div``;
-const TopButton = styled.button``;
+const Wrapper = styled.div`
+padding: 20px;
+`;
+const Title = styled.h1`
+font-weight: 300;
+text-align: center;
+`;
+const Top = styled.div`
+display:flex;
+align-items: center;
+justify-content: space-between;
+`;
+const TopButton = styled.button`
+padding:10px;
+font-weight: 600;
+cursor:pointer;
+`;
 const TopTexts = styled.div``;
 const TopText = styled.span``;
 const Bottom = styled.div``;
