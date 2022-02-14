@@ -100,17 +100,22 @@ background-color: #eee;
   height: 1px;
 `;
 const Summary = styled.div`
-flex:1;
-border: 0.5px solid lightgray';
-border-radius: 10px;
-padding: 20px;
+ flex: 1;
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
 `;
 const SummaryTitle = styled.h1`
+font-weight:200;
 
+`;
+
+const SummaryItem =styled.div`
+margin: 30px 0px;
 `
-const summaryItem = styled.div``;
-const summaryItemText = styled.span``;
-const summaryItemPrice = styled.span``;
+const SummaryItemText = styled.span``;
+const SummaryItemPrice = styled.span``;
 const Button = styled.button``;
 
 const Cart = () => {
@@ -159,22 +164,22 @@ const Cart = () => {
                 </Info>
                 <Summary>
                     <SummaryTitle> ORDER SUMMARY </SummaryTitle>
-                    <summaryItem>
-                        <summaryItemText>Subtotal</summaryItemText>
-                        <summaryItemPrice>130 DT</summaryItemPrice>
-                    </summaryItem>
-                    <summaryItem>
-                        <summaryItemText>Estimated Shipping</summaryItemText>
-                        <summaryItemPrice>20 DT</summaryItemPrice>
-                    </summaryItem>
-                    <summaryItem>
-                        <summaryItemText>Shipping Discount</summaryItemText>
-                        <summaryItemPrice>-20 DT</summaryItemPrice>
-                    </summaryItem>
-                    <summaryItem>
-                        <summaryItemText type='total'>Total</summaryItemText>
-                        <summaryItemPrice>130 DT</summaryItemPrice>
-                    </summaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Subtotal</SummaryItemText>
+                        <SummaryItemPrice>130 DT</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Estimated Shipping</SummaryItemText>
+                        <SummaryItemPrice>20 DT</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemPrice>-20 DT</SummaryItemPrice>
+                    </SummaryItem>
+                    <SummaryItem>
+                        <SummaryItemText type='total'>Total</SummaryItemText>
+                        <SummaryItemPrice>130 DT</SummaryItemPrice>
+                    </SummaryItem>
                     <Button>CHECKOUT NOW</Button>
                 </Summary>
             </Bottom>
