@@ -18,7 +18,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <Product/>
+  <Cart/>
    
    </>
   );

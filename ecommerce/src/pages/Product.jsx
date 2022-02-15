@@ -24,7 +24,7 @@ const Image = styled.img`
 width: 100%;
 height:90vh;
 object-fit: cover;
-${mobile({ height: "45vh" })}
+${mobile({ height: "39vh" })}
 `;
 const InfoContainer = styled.div`
 flex:1;
@@ -76,6 +76,7 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+${mobile({ width: "100%" })}
 `
 const AmountContainer = styled.div`
 display: flex;
