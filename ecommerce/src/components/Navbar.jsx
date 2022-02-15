@@ -33,7 +33,8 @@ border: 0.5px solid lightgray;
 display: flex;
 align-items: center;
 margin-left: 25px;
-padding: 5px
+padding: 5px;
+${mobile({ marginLeft:"5px" })}
 `
 const Input =styled.input`
   border:none;
@@ -53,14 +54,13 @@ flex:1;
 display: flex;
 align-items: center;
 justify-content: flex-end;
-
 ${mobile({ flex: 2, justifyContent: "center" })}
 `;
 const MenuItem = styled.div`
 font-size: 14px;
 cursor: pointer;
 margin-left: 25px;
-${mobile({ fontSize: "12px", marginLeft: "10px" })}
+${mobile({ fontSize: "12px", marginLeft: "10px" ,marginLeft:"3px"})}
 `
 const Navbar = () => {
   return (

@@ -13,7 +13,6 @@ function App() {
    <>
    {/* <Router>
    <Routes>  
-   
     <Route exact path="/pay" element={<Pay/>} />
     <Route exact path="/success" element={<Success/>} />
    </Routes>
