@@ -79,7 +79,7 @@ margin-top:20px;
 `;
 const SizeName =styled.span`
 margin-right: 20px;
-font-size:30px;
+
 font-weight: 600;
 `
 const SizeValue =styled.span`
