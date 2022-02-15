@@ -19,7 +19,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <Home/>
+  < Home/>
    
    </>
   );
