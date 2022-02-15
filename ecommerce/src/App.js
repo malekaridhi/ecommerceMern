@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Route, Routes} from "react-router-dom"
 import Pay from "./components/pay"
 import Success from "./components/success";
 import Home from "./pages/Home"
-import PoductList from "./pages/ProductList";
+import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -18,7 +18,7 @@ function App() {
    </Routes>
    </Router> */}
   {/* <Home/> */}
-  <PoductList/>
+  <Product/>
    
    </>
   );
