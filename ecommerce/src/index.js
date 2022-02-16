@@ -6,8 +6,17 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from 'redux-thunk';
 import reportWebVitals from './reportWebVitals';
-
-
+import rootReducer from './redux/reducers';
+const middleware = [thunk];
+const initialState = {};
+const store = createStore(
+  rootReducer,
+  initialState,
+  compose(
+    applyMiddleware(...middleware),
+   
+  )
+);
 ReactDOM.render(
   <React.StrictMode>
     <App />
