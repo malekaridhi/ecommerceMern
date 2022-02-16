@@ -11,14 +11,20 @@ import Cart from "./pages/Cart";
 function App() {
   return (
    <>
-   {/* <Router>
+   <Router>
    <Routes>  
-    <Route exact path="/pay" element={<Pay/>} />
-    <Route exact path="/success" element={<Success/>} />
+    <Route exact path="/register" element={<Register/>} />
+    <Route exact path="/login" element={<Login/>} />
+    <Route exact path="/" element={<Home/>} />
+    <Route exact path="/product/:category" element={<ProductList/>} />
+    <Route exact path="/product/:id" element={<Product/>} />
+    <Route exact path="/cart" element={<Cart/>} />
+    <Route exact path="/sucess" element={<Success/>} />
+   
    </Routes>
-   </Router> */}
+   </Router>
   {/* <Home/> */}
-  <Cart/>
+  <Home/>
    
    </>
   );
