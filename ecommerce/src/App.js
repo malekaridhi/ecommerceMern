@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 function App() {
+  const user =true
   return (
    <>
    <Router>
@@ -20,7 +21,6 @@ function App() {
     <Route exact path="/product/:id" element={<Product/>} />
     <Route exact path="/cart" element={<Cart/>} />
     <Route exact path="/sucess" element={<Success/>} />
-   
    </Routes>
    </Router>
   {/* <Home/> */}
