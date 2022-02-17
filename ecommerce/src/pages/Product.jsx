@@ -9,6 +9,7 @@ import image from "../images/c2.jpg"
 import AddIcon from '@mui/icons-material/Add';
 import { mobile } from "../responsive";
 import RemoveIcon from '@mui/icons-material/Remove';
+import {useLocation} from "react-router"
 const Container = styled.div``;
 const Wrapper = styled.div`
 padding:50px;
@@ -105,6 +106,9 @@ font-weight:500;
 }
 `
 const Product = () => {
+  const location = useLocation();
+  const cat = location.pathname.split("/")[2];
+  const [filters, setFilters] = useState({});
   return (
     <>
       <Container>
