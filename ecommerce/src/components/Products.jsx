@@ -16,7 +16,7 @@ const Products = ({cat,filters,sort}) => {
 useEffect(() => {
   const getProducts = async () =>{
     try {
-      const res = await axios.get(cat ? `http://localhost:8000/api/product?categories=${cat}`
+      const res = await axios.get(cat ? `http://localhost:8000/api/product?category=${cat}`
       :"http://localhost:8000/api/product")
      // console.log(res.data)
       setProducts(res.data);
@@ -56,9 +56,15 @@ useEffect(() => {
     return ( 
         <>
         <Container>
+{/*     
           {filteredProducts.map(item=>(
               <ProductItems item={item} key={item.id} />
-          ))}
+          ))} */}
+          {cat
+        ? filteredProducts.map((item) => <ProductItems item={item} key={item.id} />)
+        : products
+            .slice(0, 8)
+            .map((item) => <ProductItems item={item} key={item.id} />)}
         </Container>
         </>
      );
