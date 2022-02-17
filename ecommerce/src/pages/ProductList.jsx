@@ -40,8 +40,18 @@ const Option = styled.option`
 
 const PoductList = () => {
   const location = useLocation();
-  console.log(location.pathname.split("/")[2])
+  // console.log(location.pathname.split("/")[2])
   const cat = location.pathname.split("/")[2];
+  const [filters, setFilters] = useState({});
+  const [sort, setSort] = useState("newest");
+  const handeFilters = (e)=>{
+   const value = e.target.value;
+   setFilters({
+     ...filters,
+     [e.target.name]:value
+   })
+  }
+  console.log(filters)
     return ( 
         <>
         <Container>
@@ -50,7 +60,7 @@ const PoductList = () => {
         <Title>Dresses</Title>
         <FilterContainer>
             <Filter><FilterText>Filter Products:</FilterText>
-            <Select name="color">
+            <Select name="color" onChange={handeFilters}>
             <Option disabled>Color</Option>
             <Option>white</Option>
             <Option>black</Option>
@@ -59,7 +69,7 @@ const PoductList = () => {
             <Option>yellow</Option>
             <Option>green</Option>
           </Select>
-          <Select name="size" >
+          <Select name="size" onChange={handeFilters} >
             <Option disabled>Size</Option>
             <Option>XS</Option>
             <Option>S</Option>
