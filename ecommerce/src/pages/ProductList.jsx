@@ -71,11 +71,11 @@ const PoductList = () => {
           </Select>
           <Select name="size" onChange={handeFilters} >
             <Option disabled>Size</Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>xs</Option>
+            <Option>s</Option>
+            <Option>m</Option>
+            <Option>l</Option>
+            <Option>xl</Option>
           </Select>
             </Filter>
             <Filter><FilterText>Sort Products:</FilterText>
