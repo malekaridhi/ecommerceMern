@@ -7,24 +7,29 @@ import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
-import Cart from "./pages/Cart";
+import Cart from "./pages/Cart"
+import Navbar from "./components/Navbar";
+import Announcement from "./components/Announcement";
+import Footer from "./components/Footer";
+import NewsLetter from "./components/NewsLetter";
 function App() {
   const user =true
   return (
    <>
    <Router>
+
    <Routes>  
-    <Route exact path="/register" element={<Register/>} />
-    <Route exact path="/login" element={<Login/>} />
     <Route exact path="/" element={<Home/>} />
     <Route exact path="/product/:category" element={<ProductList/>} />
     <Route exact path="/product/:id" element={<Product/>} />
     <Route exact path="/cart" element={<Cart/>} />
     <Route exact path="/sucess" element={<Success/>} />
+    <Route exact path="/register" element={<Register/>} />
+    <Route exact path="/login" element={<Login/>} />
    </Routes>
    </Router>
-  {/* <Home/> */}
-  <Home/>
+  
+ 
    
    </>
   );
