@@ -51,7 +51,7 @@ const PoductList = () => {
      [e.target.name]:value
    })
   }
-  console.log(filters)
+  //console.log(filters)
     return ( 
         <>
         <Container>
@@ -79,14 +79,14 @@ const PoductList = () => {
           </Select>
             </Filter>
             <Filter><FilterText>Sort Products:</FilterText>
-            <Select >
+            <Select onChange={(e) => setSort(e.target.value)}>
             <Option value="newest">Newest</Option>
             <Option value="asc">Price (asc)</Option>
             <Option value="desc">Price (desc)</Option>
           </Select>
             </Filter>
         </FilterContainer>
-        <Products/>
+        <Products cat={cat} filters={filters} sort={sort} />
         <NewsLetter/>
         <Footer/>
         </Container>
