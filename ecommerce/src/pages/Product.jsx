@@ -139,20 +139,17 @@ const Product = () => {
             <Image src={product.img} />
           </ImageContainer>
           <InfoContainer>
-            <Title>  Mini Dress </Title>
+            <Title>  {product.title} </Title>
             <Desc>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error et
-              sunt doloribus sed nam ex dolore laudantium eos dolorem a
-              recusandae ea perferendis reiciendis architecto doloremque
-              adipisci placeat, facilis atque.
+             {product.desc}
             </Desc>
-            <Price>300 DT</Price>
+            <Price>{product.price}</Price>
             <FilterContainer>
                 <Filter>
                     <FilterTitle>Color</FilterTitle>
-                    <FilterColor color="black"></FilterColor>
-                    <FilterColor color="darkblue"></FilterColor>
-                    <FilterColor color="gray"></FilterColor>
+                    {product.color.map(col=>(
+                    <FilterColor color={col} key={col}></FilterColor>
+                    ))}
                     </Filter>
                 <Filter>
                     <FilterTitle>Size</FilterTitle>
