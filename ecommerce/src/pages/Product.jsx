@@ -1,4 +1,4 @@
-import React ,{useState}from "react";
+import React ,{useState, useEffect}from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
@@ -10,6 +10,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { mobile } from "../responsive";
 import RemoveIcon from '@mui/icons-material/Remove';
 import {useLocation} from "react-router"
+import axios from "axios";
 const Container = styled.div``;
 const Wrapper = styled.div`
 padding:50px;
@@ -107,8 +108,25 @@ font-weight:500;
 `
 const Product = () => {
   const location = useLocation();
-  const cat = location.pathname.split("/")[2];
-  const [filters, setFilters] = useState({});
+  const id = location.pathname.split("/")[2];
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const getProduct = async () =>{
+      try {
+        const res = await axios.get("/products/find/" + id);
+          setProduct(res.data);
+          console.log(res.data)
+      } catch (error) {
+        console.log(error)
+      }
+    };
+    getProduct();
+  }, [id])
+  
+
+
   return (
     <>
       <Container>
