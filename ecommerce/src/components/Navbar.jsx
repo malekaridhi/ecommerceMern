@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import MailIcon from '@mui/icons-material/Mail';
 import Image from '../images/logo4.png'
 import {mobile} from "../responsive"
+import {useSelector} from "react-redux"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Container = styled.div`
 height :60px;
@@ -63,6 +64,9 @@ margin-left: 25px;
 ${mobile({ fontSize: "12px", marginLeft: "10px" ,marginLeft:"3px"})}
 `
 const Navbar = () => {
+  const cart = useSelector(state=>state.cart)
+  const Quantity = useSelector(state=>state.cart.quantity)
+  console.log(Quantity);
   return (
     <>
       <Container>
