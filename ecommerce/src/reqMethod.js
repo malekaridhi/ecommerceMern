@@ -1,10 +1,10 @@
 import axios from "axios";
  const BASE_URL = "http://localhost:8000/api/"
- const TOkEN = ""
+ const TOKEN = ""
  export const publicRequest =  axios.create({
-     baseURL:BASE_URL,
+     baseURL:process.env.BASE_URL,
  });
  export const userRequest = axios.create({
      baseURL:BASE_URL,
-     headers:{token,"bearer"}
+     headers:{ token:`Bearer ${process.env.TOKEN}`}
  })
