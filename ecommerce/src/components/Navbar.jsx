@@ -66,7 +66,7 @@ ${mobile({ fontSize: "12px", marginLeft: "10px" ,marginLeft:"3px"})}
 const Navbar = () => {
   const cart = useSelector(state=>state.cart)
   const Quantity = useSelector(state=>state.cart.quantity)
-  console.log(Quantity);
+  console.log(cart);
   return (
     <>
       <Container>
