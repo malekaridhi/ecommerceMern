@@ -12,6 +12,8 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import {useLocation} from "react-router"
 import axios from "axios";
 import { publicRequest } from "../reqMethod";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 const Container = styled.div``;
 const Wrapper = styled.div`
 padding:50px;
@@ -114,7 +116,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  
+  const dispatch = useDispatch();
   useEffect(() => {
     const getProduct = async () =>{
       try {
@@ -137,7 +139,9 @@ const Product = () => {
 
   }
  const handleClick = () =>{
-   
+  dispatch(
+    addProduct({ ...product, quantity, color, size })
+  );
  }
 
   return (
@@ -179,7 +183,7 @@ const Product = () => {
                     <Amount>{quantity}</Amount>
                     <AddIcon onClick={()=>handleQuan("inc")}/>
                 </AmountContainer>
-                <Button> ADD TO CART </Button>
+                <Button onClick={handleClick}> ADD TO CART </Button>
             </AddContainer>
           </InfoContainer>
         </Wrapper>
