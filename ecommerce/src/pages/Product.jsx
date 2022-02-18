@@ -11,6 +11,7 @@ import { mobile } from "../responsive";
 import RemoveIcon from '@mui/icons-material/Remove';
 import {useLocation} from "react-router"
 import axios from "axios";
+import { publicRequest } from "../reqMethod";
 const Container = styled.div``;
 const Wrapper = styled.div`
 padding:50px;
@@ -115,7 +116,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () =>{
       try {
-        const res = await axios.get("/products/find/" + id);
+        const res = await publicRequest.get("/products/find/" + id);
           setProduct(res.data);
           console.log(res.data)
       } catch (error) {
@@ -135,7 +136,7 @@ const Product = () => {
         <Navbar />
         <Wrapper>
           <ImageContainer>
-            <Image src={image} />
+            <Image src={product.img} />
           </ImageContainer>
           <InfoContainer>
             <Title>  Mini Dress </Title>
