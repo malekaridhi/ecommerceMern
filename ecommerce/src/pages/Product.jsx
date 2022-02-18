@@ -112,7 +112,8 @@ const Product = () => {
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
-
+  const [quantity, setQuantity] = useState(1);
+  
   useEffect(() => {
     const getProduct = async () =>{
       try {
@@ -155,14 +156,14 @@ const Product = () => {
             <FilterContainer>
                 <Filter>
                     <FilterTitle>Color</FilterTitle>
-                    {product.color.map(col=>(
+                    {product.color?.map(col=>(
                     <FilterColor color={col} key={col}></FilterColor>
                     ))}
                     </Filter>
                 <Filter>
                     <FilterTitle>Size</FilterTitle>
                     <FilterSize>
-                        {product.size.map(s=>(
+                        {product.size?.map(s=>(
                     <FilterSizeOption key={s}>{s}</FilterSizeOption>
                     ))}
                     </FilterSize>
