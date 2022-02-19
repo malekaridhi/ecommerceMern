@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import image from "../images/c6.jpg";
 import { mobile } from '../responsive';
+import { useSelector } from 'react-redux';
 const Container = styled.div`
 
 `
@@ -151,6 +152,7 @@ font-weight: 600;
 `;
 
 const Cart = () => {
+    const cart = useSelector(state =>state.cart)
     return ( 
 
         <>
