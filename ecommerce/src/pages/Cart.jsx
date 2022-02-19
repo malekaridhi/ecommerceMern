@@ -172,7 +172,9 @@ const Cart = () => {
             </Top>
             <Bottom>
                 <Info>
-                    <Product>
+
+                {    cart.products.map((product)=>(
+                 <Product>
                         <ProdcutDetail>
                             <Image src={image}/>
                             <Detail>
@@ -196,6 +198,7 @@ const Cart = () => {
                             </ProductPrice>
                         </PriceDetail>
                     </Product>
+                    ))}
                     <Hr/>
                     
                 </Info>
