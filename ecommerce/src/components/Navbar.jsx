@@ -8,6 +8,7 @@ import Image from '../images/logo4.png'
 import {mobile} from "../responsive"
 import {useSelector} from "react-redux"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link } from "react-router-dom";
 const Container = styled.div`
 height :60px;
 ${mobile({ height: "50px" })}
@@ -82,11 +83,13 @@ const Navbar = () => {
           <Right>
               <MenuItem>REGISTER</MenuItem>
               <MenuItem>SIGN IN</MenuItem>
+              <Link to="/cart">
               <MenuItem>
               <Badge badgeContent={Quantity} color="secondary">
         <ShoppingCartOutlinedIcon color="action" />
       </Badge>
               </MenuItem>
+              </Link>
          </Right>
         </Wrapper>
       </Container>
