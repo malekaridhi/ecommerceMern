@@ -176,25 +176,25 @@ const Cart = () => {
                 {    cart.products.map((product)=>(
                  <Product>
                         <ProdcutDetail>
-                            <Image src={image}/>
+                            <Image src={product.img}/>
                             <Detail>
-                                <ProductName>SPORTWEAR LONG SLEEVE </ProductName>
+                                <ProductName> {product.title} </ProductName>
                                 {/* <ProductId><b>ID:</b>75399521147</ProductId> */}
                                 <ProductSize>
                                 <SizeName>Size</SizeName>
-                                <SizeValue>36</SizeValue>
+                                <SizeValue>{product.size}</SizeValue>
                                 </ProductSize>
-                                <ProductColor color="grey"/>
+                                <ProductColor color={product.color}/>
                             </Detail>
                         </ProdcutDetail>
                         <PriceDetail>
                             <ProductAmountContainer>
                                 <AddIcon/>
-                                <ProductAmount>1</ProductAmount>
+                                <ProductAmount>{product.quantity}</ProductAmount>
                                 <RemoveIcon/>  
                             </ProductAmountContainer>
                             <ProductPrice>
-                                     120DT
+                             {product.price * product.quantity} DT
                             </ProductPrice>
                         </PriceDetail>
                     </Product>
