@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-const KEY=process.env.REACT_APP_STRIPE;
+const KEY = process.env.REACT_APP_STRIPE;
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
