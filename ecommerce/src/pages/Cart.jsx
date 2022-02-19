@@ -62,8 +62,7 @@ display:flex;
 `;
 const Image = styled.img`
 width:160px;
-
-`;
+margin: 20px;`;
 const Detail = styled.div`
 padding: 20px;
 display: flex;
@@ -173,7 +172,7 @@ const Cart = () => {
             <Bottom>
                 <Info>
 
-                {    cart.products.map((product)=>(
+                {  cart.products.map((product)=>(
                  <Product>
                         <ProdcutDetail>
                             <Image src={product.img}/>
@@ -197,7 +196,9 @@ const Cart = () => {
                              {product.price * product.quantity} DT
                             </ProductPrice>
                         </PriceDetail>
+                      
                     </Product>
+                    
                     ))}
                     <Hr/>
                     
