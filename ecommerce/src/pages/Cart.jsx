@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {userRequest} from "../reqMethod"
 const KEY = process.env.REACT_APP_STRIPE;
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -157,11 +158,11 @@ const Cart = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await axios.post(
-          "http://localhost:8000/api/checkout/payment",
+        const res = await userRequest.post(
+          "checkout/payment",
           {
             tokenId: stripeToken.id,
-            amount: 2000,
+            amount: 500,
           }
         );
         console.log(res.data);
