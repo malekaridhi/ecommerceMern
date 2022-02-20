@@ -240,8 +240,8 @@ const Cart = () => {
                 image="https://img2.freepng.fr/20180519/rya/kisspng-logo-phoenix-art-5afffc96998f80.692522331526725782629.jpg"
                 billingAddress
                 shippingAddress
-                description="your total is $20"
-                amount={2000}
+                description={`Your total is $${cart.total}`}
+                amount={cart.total * 100}
                 token={onToken}
                 stripeKey={KEY}
               >
