@@ -167,13 +167,16 @@ const Cart = () => {
           }
         );
         console.log(res.data);
-        navigate("/success")
+        navigate("/success",{
+          stripeData: res.data,
+          products: cart,
+        })
       } catch (err) {
         console.log(err);
       }
     };
     stripeToken && makeRequest();
-  }, [stripeToken,navigate]);
+  }, [stripeToken,cart.total,navigate]);
   return (
     <>
       <Container>
