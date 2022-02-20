@@ -6,5 +6,5 @@ import axios from "axios";
  });
  export const userRequest = axios.create({
      baseURL:BASE_URL,
-     headers:{ token:`Bearer ${process.env.TOKEN}`}
+     headers:{ token:`Bearer ${process.env.REACT_APP_TOKEN}`}
  })
