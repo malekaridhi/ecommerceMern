@@ -10,9 +10,11 @@ const cartSlice = createSlice({
       startLogin: (state ) => {
         state.isFetching = true
       },
-      startLogin: (state ) => {
-        state.isFetching = true
+      successLogin: (state ,action) => {
+        state.isFetching = false
+        state.currentUser = action.payload;
       },
+      
     },
   });
   
