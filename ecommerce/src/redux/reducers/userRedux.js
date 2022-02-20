@@ -2,18 +2,19 @@ import {createSlice} from "@reduxjs/toolkit"
 const cartSlice = createSlice({
     name: "user",
     initialState: {
-      products: [],
-      quantity: 0,
-      total: 0,
+      currentUser: null,
+      isFetching:false,
+      error: false,
     },
     reducers: {
-      addProduct: (state, action) => {
-        state.quantity += 1;
-        state.products.push(action.payload);
-        state.total += action.payload.price * action.payload.quantity;
+      startLogin: (state ) => {
+        state.isFetching = true
+      },
+      startLogin: (state ) => {
+        state.isFetching = true
       },
     },
   });
   
-  export const { addProduct } = cartSlice.actions;
+  export const {  } = cartSlice.actions;
   export default cartSlice.reducer;
