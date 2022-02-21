@@ -10,6 +10,8 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
+  background-color: black;
+  color: #707579;
   ${mobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
