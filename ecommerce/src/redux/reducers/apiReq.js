@@ -1,4 +1,4 @@
-import { startLogin, successLogin, faledLogin } from "./userRedux";
+import { startLogin, successLogin, faledLogin } from "../userRedux";
 
 import { publicRequest } from "../../reqMethod";
 

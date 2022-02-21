@@ -11,6 +11,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from "react-router-dom";
 const Container = styled.div`
 height :60px;
+
 ${mobile({ height: "50px" })}
 `;
 const Wrapper = styled.div`
@@ -18,6 +19,7 @@ padding: 10px 20px;
 display: flex;
 align-items: center;
 justify-content: space-between;
+color: #707579;
 ${mobile({ padding: "10px 0px" })}
 `;
 const Left = styled.div`
@@ -28,6 +30,7 @@ align-items: center;
 const Language =styled.span`
 font-size: 10px;
 cursor: pointer;
+color: #707579;
 ${mobile({ display: "none" })}
 `
 const SearchContainer = styled.div`
@@ -36,10 +39,12 @@ display: flex;
 align-items: center;
 margin-left: 25px;
 padding: 5px;
+border-radius: 50px;
 ${mobile({ marginLeft:"5px" })}
 `
 const Input =styled.input`
   border:none;
+  outline: none;
   ${mobile({ width: "50px" })}
 `
 const Center = styled.div`
@@ -62,6 +67,10 @@ const MenuItem = styled.div`
 font-size: 14px;
 cursor: pointer;
 margin-left: 25px;
+&:hover{
+  background-color: #f2be00;
+  transform: scale(1.1);
+}
 ${mobile({ fontSize: "12px", marginLeft: "10px" ,marginLeft:"3px"})}
 `
 const Navbar = () => {
@@ -76,7 +85,7 @@ const Navbar = () => {
               <Language>EN</Language>
               <SearchContainer>
                  <Input placeholder="Search"/>
-                  <SearchIcon style={{color:"gray",fontSize:16}}/>
+                  <SearchIcon style={{color:"#f7ba88",fontSize:16}}/>
               </SearchContainer>
           </Left>
           <Center><Logo src={Image}/></Center>
@@ -85,7 +94,7 @@ const Navbar = () => {
               <MenuItem>SIGN IN</MenuItem>
               <Link to="/cart">
               <MenuItem>
-              <Badge badgeContent={Quantity} color="secondary">
+              <Badge  badgeContent={Quantity} color="secondary">
         <ShoppingCartOutlinedIcon color="action" />
       </Badge>
               </MenuItem>
