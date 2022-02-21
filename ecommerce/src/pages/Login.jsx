@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 const Container = styled.div`
@@ -54,6 +54,9 @@ margin: 5px 0px;
 `;
 const Error = styled.span``;
 const Login = () => {
+ const [username,setUsername]= useState("")
+ const [password,setPassword]= useState("")
+
   return (
     <>
       <Container>
