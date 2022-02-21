@@ -63,8 +63,12 @@ const Login = () => {
           <Wrapper>
               <Title>LOGIN</Title>
               <Form>
-                  <Input placeholder="username"/>
-                  <Input placeholder="password"/>
+                  <Input placeholder="username"
+                  onChange={(e)=> setUsername(e.target.value)}
+                  />
+                  <Input placeholder="password"
+                  onChange={(e)=>setPassword(e.target.username)}
+                  />
                 <Button>LOGIN</Button>
                 <Link>FORGET PASSWORD ??</Link>
                 <Link>CREATE NEW ACCOUNT </Link>
