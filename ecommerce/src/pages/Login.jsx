@@ -75,7 +75,7 @@ const Login = () => {
             />
             <Input
               placeholder="password"
-              type="password"
+              
               onChange={(e) => setPassword(e.target.username)}
             />
             <Button onClick={handleLogin}>LOGIN</Button>
