@@ -74,7 +74,7 @@ margin-left: 25px;
 ${mobile({ fontSize: "12px", marginLeft: "10px" ,marginLeft:"3px"})}
 `
 const Navbar = () => {
-  const cart = useSelector(state=>state.cart)
+  const cart = useSelector(state=>state)
   const Quantity = useSelector(state=>state.cart.quantity)
   console.log(cart);
   return (
