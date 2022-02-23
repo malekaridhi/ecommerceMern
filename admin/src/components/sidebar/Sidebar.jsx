@@ -47,6 +47,38 @@ const Sidebar = () => {
                        Report
                      </li>
                  </ul>
+                 <h3 className='sidebarTitle'>Notification</h3>
+                 <ul className="sidebarList">
+                     <li className="sidebarListItem ">
+                       <PersonOutlineIcon className='sidebarIcon' />
+                       Mail
+                     </li>
+                     <li className="sidebarListItem">
+                       <StorefrontIcon className='sidebarIcon'/>
+                       Facebook
+                     </li>
+                     <li className="sidebarListItem">
+                       <AttachMoneyIcon className='sidebarIcon'/>
+                       Message
+                     </li>
+                     
+                 </ul>
+                 <h3 className='sidebarTitle'>Staff</h3>
+                 <ul className="sidebarList">
+                     <li className="sidebarListItem ">
+                       <PersonOutlineIcon className='sidebarIcon' />
+                       Manage
+                     </li>
+                     <li className="sidebarListItem">
+                       <StorefrontIcon className='sidebarIcon'/>
+                       Analitics
+                     </li>
+                     <li className="sidebarListItem">
+                       <AttachMoneyIcon className='sidebarIcon'/>
+                       Reports
+                     </li>
+                     
+                 </ul>
             </div>
         </div>
         </div>
