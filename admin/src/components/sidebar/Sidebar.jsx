@@ -5,6 +5,8 @@ import TimelineIcon from '@mui/icons-material/Timeline';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import StorefrontIcon from '@mui/icons-material/Storefront';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
 const Sidebar = () => {
     return ( 
         <>
@@ -26,22 +28,22 @@ const Sidebar = () => {
                        Home
                      </li>
                  </ul>
-                 <h3 className='sidebarTitle'>Quick Manue</h3>
+                 <h3 className='sidebarTitle'>Quick Menu</h3>
                  <ul className="sidebarList">
-                     <li className="sidebarListItem">
-                       <LineStyleIcon className='sidebarIcon'/>
+                     <li className="sidebarListItem active">
+                       <PersonOutlineIcon className='sidebarIcon' />
                        Users
                      </li>
                      <li className="sidebarListItem">
-                       <TimelineIcon className='sidebarIcon'/>
+                       <StorefrontIcon className='sidebarIcon'/>
                        Product
                      </li>
                      <li className="sidebarListItem">
-                       <TrendingUpIcon className='sidebarIcon'/>
+                       <AttachMoneyIcon className='sidebarIcon'/>
                        Transactions
                      </li>
                       <li className="sidebarListItem">
-                       <TrendingUpIcon className='sidebarIcon'/>
+                       <EqualizerIcon className='sidebarIcon'/>
                        Report
                      </li>
                  </ul>
