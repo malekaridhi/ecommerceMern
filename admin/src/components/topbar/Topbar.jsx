@@ -16,6 +16,14 @@ const Topbar = () => {
                   <NotificationsNoneIcon/>
                   <span className='topIconBadge'>2</span>
               </div>
+              <div className="topbarIconContainer">
+                  <LanguageIcon/>
+                  <span className='topIconBadge'>2</span>
+              </div>
+              <div className="topbarIconContainer">
+                  <SettingsIcon/>
+                  <span className='topIconBadge'>2</span>
+              </div>
           </div>
       </div>
      </div>

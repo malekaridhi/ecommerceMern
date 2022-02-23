@@ -15,9 +15,13 @@ background-color: white;
  cursor: pointer;
  width: 36%;
 }
+.topRight{
+  display: flex;
+  align-items: center;  
+}
 .topbarIconContainer{
     position: relative;
-
+    cursor: pointer;
 }
 .topIconBadge{
     width: 15px;
