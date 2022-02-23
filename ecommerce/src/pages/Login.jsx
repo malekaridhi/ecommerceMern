@@ -67,9 +67,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
   const {isFetching,error}= useSelector(state=>state.user)
+  console.log(error,isFetching);
   const handleLogin = (e) => {
     e.preventDefault();
     login(dispatch,{username,password})
+    
   };
   return (
     <>

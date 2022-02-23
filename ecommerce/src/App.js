@@ -12,8 +12,9 @@ import Navbar from "./components/Navbar";
 import Announcement from "./components/Announcement";
 import Footer from "./components/Footer";
 import NewsLetter from "./components/NewsLetter";
+import { useSelector } from "react-redux";
 function App() {
-  const user =true
+  const user =useSelector((state)=>state.user.current)
   return (
    <>
    <Router>

@@ -9,7 +9,7 @@ export const login = async(dispatch, user) =>{
      console.log(res.data)
      dispatch(successLogin(res.data))
  } catch (error) {
-     dispatch(faledLogin)
+     dispatch(faledLogin())
  }
 
 
