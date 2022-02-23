@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router,Route, Routes} from "react-router-dom"
+import { BrowserRouter as Router,Route, Routes, Navigate} from "react-router-dom"
 import Pay from "./components/pay"
 import Success from "./components/success";
 import Home from "./pages/Home"
@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import NewsLetter from "./components/NewsLetter";
 import { useSelector } from "react-redux";
 function App() {
-  const user =useSelector((state)=>state.user.current)
+  const user =useSelector((state)=>state.user.currentUser)
   return (
    <>
    <Router>
@@ -26,7 +26,11 @@ function App() {
     <Route exact path="/cart" element={<Cart/>} />
     <Route exact path="/success" element={<Success/>} />
     <Route exact path="/register" element={<Register/>} />
-    <Route exact path="/login" element={<Login/>} />
+    {user?     <Route
+        path="*"
+        element={<Navigate to="/" />}
+    />
+ :<Route exact path="/login" element={<Login/>} /> }
    </Routes>
    </Router>
   
