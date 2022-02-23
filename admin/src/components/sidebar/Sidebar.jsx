@@ -7,6 +7,11 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
+import ReportIcon from '@mui/icons-material/Report';
 const Sidebar = () => {
     return ( 
         <>
@@ -30,7 +35,7 @@ const Sidebar = () => {
                  </ul>
                  <h3 className='sidebarTitle'>Quick Menu</h3>
                  <ul className="sidebarList">
-                     <li className="sidebarListItem active">
+                     <li className="sidebarListItem ">
                        <PersonOutlineIcon className='sidebarIcon' />
                        Users
                      </li>
@@ -50,15 +55,15 @@ const Sidebar = () => {
                  <h3 className='sidebarTitle'>Notification</h3>
                  <ul className="sidebarList">
                      <li className="sidebarListItem ">
-                       <PersonOutlineIcon className='sidebarIcon' />
+                       <MailOutlineIcon className='sidebarIcon' />
                        Mail
                      </li>
                      <li className="sidebarListItem">
-                       <StorefrontIcon className='sidebarIcon'/>
+                       <DynamicFeedIcon className='sidebarIcon'/>
                        Facebook
                      </li>
                      <li className="sidebarListItem">
-                       <AttachMoneyIcon className='sidebarIcon'/>
+                       <ChatBubbleOutlineOutlinedIcon className='sidebarIcon'/>
                        Message
                      </li>
                      
@@ -66,15 +71,15 @@ const Sidebar = () => {
                  <h3 className='sidebarTitle'>Staff</h3>
                  <ul className="sidebarList">
                      <li className="sidebarListItem ">
-                       <PersonOutlineIcon className='sidebarIcon' />
+                       <WorkOutlineOutlinedIcon className='sidebarIcon' />
                        Manage
                      </li>
                      <li className="sidebarListItem">
-                       <StorefrontIcon className='sidebarIcon'/>
+                       <TimelineIcon className='sidebarIcon'/>
                        Analitics
                      </li>
                      <li className="sidebarListItem">
-                       <AttachMoneyIcon className='sidebarIcon'/>
+                       <ReportIcon className='sidebarIcon'/>
                        Reports
                      </li>
                      
