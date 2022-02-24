@@ -1,6 +1,7 @@
 import React from 'react';
 import "./widgetSm.css"
 import image from "../../images/a4.jpg"
+import VisibilityIcon from '@mui/icons-material/Visibility';
 const WidgetSm = () => {
     return ( 
         <div className="widgetsm">
@@ -13,7 +14,10 @@ const WidgetSm = () => {
                       <span className="widgetsmUserTitle">Teacher</span>
 
                   </div>
-                  <button className="widgetsmButton"></button>
+                  <button className="widgetsmButton">
+                      <VisibilityIcon className='widgetsmIcon'/>
+                      Display
+                  </button>
              </li>
          </ul>
         </div>
