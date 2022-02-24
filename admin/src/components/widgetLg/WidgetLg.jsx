@@ -15,7 +15,11 @@ const WidgetLg = () => {
                     <tr className="widgetLgTr">
                          <td className="widgetLgUser">
                               <img src={image} alt="" className="widgetLgImg" />
+                              <span className="widgetLgName">Phebee Bufee</span>
                          </td>
+                         <td className="widgetLgDate">24 Feb 2022</td>
+                         <td className="widgetLgAmount">500 DT</td>
+                         <td className="widgetLgStatus"></td>
                     </tr>
              </table>
         </div>
