@@ -3,3 +3,7 @@
     background-color:  rgb(64, 1, 122);
 
 }
+.homeWidgets{
+    display: flex;
+    margin: 20px;
+}
