@@ -3,18 +3,18 @@ import "./userList.css"
 import { DataGrid } from '@mui/x-data-grid';
 import image from "../../images/a2.jpg"
 const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
-    { field: 'username', headerName: 'Username', width: 130 },
-    { field: 'email', headerName: 'Email', width: 130 },
+    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'username', headerName: 'Username', width: 200 },
+    { field: 'email', headerName: 'Email', width: 200 },
     {
       field: 'status',
       headerName: 'Status',
-      width: 90,
+      width: 120,
     },
     {
         field: 'transaction',
-        headerName: 'Transaction',
-        width: 90,
+        headerName: 'Transaction Volume',
+        width: 190,
       },
     ,
   ];
