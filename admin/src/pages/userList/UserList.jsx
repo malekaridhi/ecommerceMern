@@ -2,8 +2,8 @@ import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import image from "../../images/a2.jpg";
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -38,8 +38,8 @@ const columns = [
         return(
             <>
         {/* //    <button className="userlistEdit">Edit</button>  */}
-           <EditOutlinedIcon className="userListEdit"/>
-           <DeleteOutlineIcon className="userListDelete"/>
+           <EditIcon className="userListEdit"/>
+           <DeleteIcon className="userListDelete"/>
            </>
         )
     }
