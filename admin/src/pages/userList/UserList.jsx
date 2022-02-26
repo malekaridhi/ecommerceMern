@@ -112,18 +112,21 @@ const UserList = () => {
       <div
         style={{
           margin: "20px",
-          height: 400,
+          height: 475,
           width: "97%",
           backgroundColor: "#1e1e1e",
         }}
       >
         <DataGrid
+        options={{
+            paging: false
+        }}
           style={{ color: "rgb(155, 151, 151)" }}
           rows={rows}
           columns={columns}
           disableSelectionOnClick
-          pageSize={5}
-         rowsPerPageOptions={[100]}
+          pageSize={8}
+         rowsPerPageOptions={[10]}
          
           checkboxSelection
         />
