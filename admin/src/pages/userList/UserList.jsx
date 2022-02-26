@@ -38,8 +38,8 @@ const columns = [
         return(
             <>
         {/* //    <button className="userlistEdit">Edit</button>  */}
-           <EditOutlinedIcon/>
-           <DeleteOutlineIcon/>
+           <EditOutlinedIcon className="userListEdit"/>
+           <DeleteOutlineIcon className="userListDelete"/>
            </>
         )
     }
