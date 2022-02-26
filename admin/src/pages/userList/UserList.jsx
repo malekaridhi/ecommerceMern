@@ -121,6 +121,7 @@ const UserList = () => {
           style={{ color: "rgb(155, 151, 151)" }}
           rows={rows}
           columns={columns}
+          disableSelectionOnClick
           pageSize={5}
           rowsPerPageOptions={[5]}
           checkboxSelection
