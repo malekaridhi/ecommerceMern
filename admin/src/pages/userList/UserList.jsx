@@ -2,7 +2,6 @@ import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import image from "../../images/a2.jpg";
-import { makeStyles } from "@material-ui/core/styles";
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -36,7 +35,7 @@ const rows = [
   {
     id: 1,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -44,7 +43,7 @@ const rows = [
   {
     id: 2,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -52,7 +51,7 @@ const rows = [
   {
     id: 3,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -60,7 +59,7 @@ const rows = [
   {
     id: 4,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -68,7 +67,7 @@ const rows = [
   {
     id: 5,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -76,7 +75,7 @@ const rows = [
   {
     id: 6,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -84,7 +83,7 @@ const rows = [
   {
     id: 7,
     username: "Jon Snow",
-    avatar: `${ image }`,
+    avatar: `${image}`,
     email: "jon@gmail.com",
     status: "active",
     transaction: "500DT",
@@ -94,8 +93,16 @@ const rows = [
 const UserList = () => {
   return (
     <div className="userList">
-      <div style={{ height: 400, width: "100%",backgroundColor:"#1e1e1e" }} >
+      <div
+        style={{
+          margin: "20px",
+          height: 400,
+          width: "97%",
+          backgroundColor: "#1e1e1e",
+        }}
+      >
         <DataGrid
+          style={{ color: "rgb(155, 151, 151)" }}
           rows={rows}
           columns={columns}
           pageSize={5}
