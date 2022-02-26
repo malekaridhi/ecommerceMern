@@ -2,6 +2,8 @@ import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import image from "../../images/a2.jpg";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -27,6 +29,20 @@ const columns = [
     field: "transaction",
     headerName: "Transaction Volume",
     width: 190,
+  },
+  {
+    field: "action",
+    headerName: "Action",
+    width: 150,
+    renderCell:(params)=>{
+        return(
+            <>
+        {/* //    <button className="userlistEdit">Edit</button>  */}
+           <EditOutlinedIcon/>
+           <DeleteOutlineIcon/>
+           </>
+        )
+    }
   },
   ,
 ];
