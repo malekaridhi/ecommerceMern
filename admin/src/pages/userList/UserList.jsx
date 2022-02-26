@@ -2,6 +2,7 @@ import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import image from "../../images/a2.jpg";
+import { makeStyles } from "@material-ui/core/styles";
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -93,7 +94,7 @@ const rows = [
 const UserList = () => {
   return (
     <div className="userList">
-      <div style={{ height: 400, width: "100%" }}>
+      <div style={{ height: 400, width: "100%",backgroundColor:"#1e1e1e" }} >
         <DataGrid
           rows={rows}
           columns={columns}

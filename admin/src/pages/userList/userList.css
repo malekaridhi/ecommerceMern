@@ -1,4 +1,18 @@
 .userList{
     flex: 4;
-    /* background-color:  rgb(64, 1, 122); */
+    background-color:  rgb(64, 1, 122);
+    color: "#97979B"
 }
+.userListUser {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .userListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
