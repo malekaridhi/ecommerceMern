@@ -17,11 +17,21 @@
     margin-right: 10px;
   }
   .userListDelete{
-    color: red;
+    background-color: red;
     cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 10px;
+    color: white;
+    margin: 10px;
 }
 .userListEdit{
-    color: #3bb077;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: #3bb077;
+    color: white;
     cursor: pointer;
+    margin: 10px;
     
 }
