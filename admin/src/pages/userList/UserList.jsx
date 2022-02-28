@@ -1,7 +1,7 @@
 import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
-import image from "../../images/a2.jpg";
+import { rows } from "../../dummyData";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 const columns = [
@@ -47,64 +47,6 @@ const columns = [
   ,
 ];
 
-const rows = [
-  {
-    id: 1,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 2,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 3,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 4,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 5,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 6,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-  {
-    id: 7,
-    username: "Jon Snow",
-    avatar: `${image}`,
-    email: "jon@gmail.com",
-    status: "active",
-    transaction: "500DT",
-  },
-];
 
 const UserList = () => {
   return (

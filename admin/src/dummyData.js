@@ -1,3 +1,5 @@
+
+import image from "../../images/a2.jpg";
 export const UserData = [
     {
       name: "Jan",
@@ -49,3 +51,62 @@ export const UserData = [
       "Active User": 2000,
     },
   ];
+  export const rows = [
+    {
+      id: 1,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 2,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 3,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 4,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 5,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 6,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+    {
+      id: 7,
+      username: "Jon Snow",
+      avatar: `${image}`,
+      email: "jon@gmail.com",
+      status: "active",
+      transaction: "500DT",
+    },
+  ];
+  
