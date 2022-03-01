@@ -51,7 +51,7 @@ export const UserData = [
       "Active User": 2000,
     },
   ];
-  export const rows = [
+  export const UserRows = [
     {
       id: 1,
       username: "Jon Snow",

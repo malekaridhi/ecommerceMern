@@ -1,7 +1,7 @@
 import React from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { rows } from "../../dummyData";
+import { UserRows } from "../../dummyData";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 const columns = [
@@ -64,7 +64,7 @@ const UserList = () => {
             paging: false
         }}
           style={{ color: "rgb(155, 151, 151)" }}
-          rows={rows}
+          rows={UserRows}
           columns={columns}
           disableSelectionOnClick
           pageSize={8}
