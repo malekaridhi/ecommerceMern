@@ -39,7 +39,7 @@ const columns = [
     renderCell:(params)=>{
         return(
             <>
-            <Link>
+            <Link to={"/users/"+params.row.id}>
         {/* //    <button className="userlistEdit">Edit</button>  */}
            <EditIcon className="userListEdit"/>
             </Link>
