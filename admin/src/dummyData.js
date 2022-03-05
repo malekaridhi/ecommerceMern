@@ -1,5 +1,6 @@
 
-import image from "../../images/a2.jpg";
+import image from "./images/a2.jpg";
+
 export const UserData = [
     {
       name: "Jan",
