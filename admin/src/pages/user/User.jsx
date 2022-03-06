@@ -2,6 +2,7 @@ import React from 'react';
 import "./user.css"
 import image from "../../images/b3.jpg"
 import Avatar from '@mui/material/Avatar';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 const User = () => {
     return ( 
         <div className='user'>
@@ -19,7 +20,30 @@ const User = () => {
 
                         </div>
                     </div>
-                    <div className="userShowBottom"></div>
+                    <div className="userShowBottom">
+                        <span className="userShowTitle">Account Details</span>
+                        <div className="userShowInfo">
+                           <PermIdentityIcon className='userShowIcon'/>
+                           <span className="userShowInfoTitle">rachel888</span>
+                        </div>
+                        <div className="userShowInfo">
+                           <PermIdentityIcon className='userShowIcon'/>
+                           <span className="userShowInfoTitle">12.02.1978</span>
+                        </div>
+                        <div className="userShowInfo">
+                           <PermIdentityIcon className='userShowIcon'/>
+                           <span className="userShowInfoTitle">+216 20 555 555</span>
+                        </div>
+
+                        <div className="userShowInfo">
+                           <PermIdentityIcon className='userShowIcon'/>
+                           <span className="userShowInfoTitle">rachel888@gmail.com</span>
+                        </div>
+                        <div className="userShowInfo">
+                           <PermIdentityIcon className='userShowIcon'/>
+                           <span className="userShowInfoTitle">Tunis | Tunisia</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="userUpdate"></div>
             </div>
