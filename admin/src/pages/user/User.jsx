@@ -1,6 +1,7 @@
 import React from 'react';
 import "./user.css"
 import image from "../../images/b3.jpg"
+import Avatar from '@mui/material/Avatar';
 const User = () => {
     return ( 
         <div className='user'>
@@ -11,7 +12,7 @@ const User = () => {
             <div className="userContainer">
                 <div className="userShow">
                     <div className="userShowTop">
-                        <img src={image} alt="" className="userShowImg" />
+                        <Avatar src={image}  className="userShowImg" />
                         <div className="userShowTopTitle">
                             <span className="userShowUsername">Rachel Green</span>
                             <span className="userShowTitle">Web Developper</span>
