@@ -4,7 +4,7 @@ import "./newUser.css"
 const NewUser = () => {
     return ( 
         <div className="newUser">
-            
+           new User 
         </div>
      );
 }
