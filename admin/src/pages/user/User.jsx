@@ -3,6 +3,10 @@ import "./user.css"
 import image from "../../images/b3.jpg"
 import Avatar from '@mui/material/Avatar';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 const User = () => {
     return ( 
         <div className='user'>
@@ -27,20 +31,20 @@ const User = () => {
                            <span className="userShowInfoTitle">rachel888</span>
                         </div>
                         <div className="userShowInfo">
-                           <PermIdentityIcon className='userShowIcon'/>
+                           <CalendarTodayIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">12.02.1978</span>
                         </div>
                         <div className="userShowInfo">
-                           <PermIdentityIcon className='userShowIcon'/>
+                           <PhoneAndroidIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">+216 20 555 555</span>
                         </div>
 
                         <div className="userShowInfo">
-                           <PermIdentityIcon className='userShowIcon'/>
+                           <MailOutlineIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">rachel888@gmail.com</span>
                         </div>
                         <div className="userShowInfo">
-                           <PermIdentityIcon className='userShowIcon'/>
+                           <LocationSearchingIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">Tunis | Tunisia</span>
                         </div>
                     </div>
