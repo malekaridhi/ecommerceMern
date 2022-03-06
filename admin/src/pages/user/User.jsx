@@ -34,6 +34,7 @@ const User = () => {
                            <CalendarTodayIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">12.02.1978</span>
                         </div>
+                        <span className="userShowTitle">Contact Details</span>
                         <div className="userShowInfo">
                            <PhoneAndroidIcon className='userShowIcon'/>
                            <span className="userShowInfoTitle">+216 20 555 555</span>
