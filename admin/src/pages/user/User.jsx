@@ -1,12 +1,14 @@
 import React from "react";
 import "./user.css";
 import image from "../../images/b3.jpg";
+import image1 from "../../images/b4.jpg";
 import Avatar from "@mui/material/Avatar";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import PublishIcon from "@mui/icons-material/Publish";
 const User = () => {
   return (
     <div className="user">
@@ -55,41 +57,55 @@ const User = () => {
             <div className="userUpdateLeft">
               <div className="userUpdateItem">
                 <label>Username</label>
-                <input type="text"
-                 className="userUpdateInput" 
-                 placeholder="rachelgreen888"
-                 />
+                <input
+                  type="text"
+                  className="userUpdateInput"
+                  placeholder="rachelgreen888"
+                />
               </div>
               <div className="userUpdateItem">
                 <label>Full Name</label>
-                <input type="text"
-                 className="userUpdateInput" 
-                 placeholder="Rachel Green"
-                 />
+                <input
+                  type="text"
+                  className="userUpdateInput"
+                  placeholder="Rachel Green"
+                />
               </div>
               <div className="userUpdateItem">
                 <label>Email</label>
-                <input type="text"
-                 className="userUpdateInput" 
-                 placeholder="rachelgreen888@gmail.com"
-                 />
+                <input
+                  type="text"
+                  className="userUpdateInput"
+                  placeholder="rachelgreen888@gmail.com"
+                />
               </div>
               <div className="userUpdateItem">
                 <label>Phone</label>
-                <input type="text"
-                 className="userUpdateInput" 
-                 placeholder="+216 20 555 555"
-                 />
+                <input
+                  type="text"
+                  className="userUpdateInput"
+                  placeholder="+216 20 555 555"
+                />
               </div>
               <div className="userUpdateItem">
                 <label>Adress</label>
-                <input type="text"
-                 className="userUpdateInput" 
-                 placeholder="Tunis | Tunisia"
-                 />
+                <input
+                  type="text"
+                  className="userUpdateInput"
+                  placeholder="Tunis | Tunisia"
+                />
               </div>
             </div>
-            <div className="userUpdateRight"></div>
+            <div className="userUpdateRight">
+              <div className="userUpdateUpload">
+                <img src={image1} alt="" className="userUpdateImg" />
+                <label htmlFor="file">
+                  <PublishIcon className="userUpdateIcon" />
+                </label>
+                <input type="file" id="file" style={{ display: "none" }}/>
+              </div>
+              <button className="userUpdateButton">Update</button>
+            </div>
           </form>
         </div>
       </div>
