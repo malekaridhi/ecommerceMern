@@ -95,6 +95,7 @@ const User = () => {
                   placeholder="Tunis | Tunisia"
                 />
               </div>
+              
             </div>
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
@@ -104,9 +105,9 @@ const User = () => {
                 </label>
                 <input type="file" id="file" style={{ display: "none" }}/>
               </div>
-              <button className="userUpdateButton">Update</button>
             </div>
           </form>
+              <button className="userUpdateButton">Update</button>
         </div>
       </div>
     </div>
