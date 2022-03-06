@@ -20,7 +20,7 @@ const User = () => {
                         <Avatar src={image}  className="userShowImg" />
                         <div className="userShowTopTitle">
                             <span className="userShowUsername">Rachel Green</span>
-                            <span className="userShowTitle">Web Developper</span>
+                            <span className="userShowUserTitle">Web Developper</span>
 
                         </div>
                     </div>
