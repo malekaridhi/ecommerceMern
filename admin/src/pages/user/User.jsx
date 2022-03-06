@@ -1,5 +1,6 @@
 import React from 'react';
 import "./user.css"
+import image from "../../images/b3.jpg"
 const User = () => {
     return ( 
         <div className='user'>
@@ -9,7 +10,14 @@ const User = () => {
             </div>
             <div className="userContainer">
                 <div className="userShow">
-                    <div className="userShowTop"></div>
+                    <div className="userShowTop">
+                        <img src={image} alt="" className="userShowImg" />
+                        <div className="userShowTopTitle">
+                            <span className="userShowUsername">Rachel Green</span>
+                            <span className="userShowTitle">Web Developper</span>
+
+                        </div>
+                    </div>
                     <div className="userShowBottom"></div>
                 </div>
                 <div className="userUpdate"></div>
