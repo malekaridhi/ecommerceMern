@@ -9,12 +9,16 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import PublishIcon from "@mui/icons-material/Publish";
+import { Link } from "react-router-dom";
+
 const User = () => {
   return (
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
+        <Link>
         <button className="userAddButton">Create</button>
+        </Link>
       </div>
       <div className="userContainer">
         <div className="userShow">
