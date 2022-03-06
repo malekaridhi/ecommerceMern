@@ -22,3 +22,23 @@
 .userTitle{
     color: #1e1e1e;
 }
+.userContainer{
+    display: flex;
+    margin-top: 20px;
+}
+.userShow{
+    flex: 1;
+    padding: 20px;
+    background-color: #1e1e1e;
+    -webkit-box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+   
+}
+.userUpdate{
+    flex: 2;
+    padding: 20px;
+    background-color: #1e1e1e;
+    -webkit-box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+}
