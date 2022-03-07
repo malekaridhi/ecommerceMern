@@ -1,5 +1,6 @@
 
 import image from "./images/a2.jpg";
+import image1 from './images/c1.jpg'
 
 export const UserData = [
     {
@@ -110,4 +111,95 @@ export const UserData = [
       transaction: "500DT",
     },
   ];
-  
+  export const productRows = [
+    {
+      id: 1,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 2,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 3,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 4,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 5,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 6,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 7,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 8,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 9,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+    {
+      id: 10,
+      name: "Apple Airpods",
+      img:
+        `${image1}`,
+      stock: 123,
+      status: "active",
+      price: "$120.00",
+    },
+  ];
