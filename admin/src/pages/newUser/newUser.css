@@ -4,10 +4,15 @@
     background-color: rgb(64, 1, 122);
   }
   .newUserForm{
-
+    display: flex;
+    flex-wrap: wrap;
   }
   .newUserItem{
-
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
   }
   .newUserItem>label{
 
@@ -25,5 +30,5 @@
 
   }
   .newUserButton{
-      
+
   }
