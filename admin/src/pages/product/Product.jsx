@@ -1,6 +1,8 @@
 import React from 'react';
 import "./product.css"
 import { Link } from "react-router-dom";
+import Chart from "../../components/charts/Chart";
+import {productData} from "../../dummyData"
 const Product = () => {
     return ( 
         <div className="product">
@@ -12,7 +14,9 @@ const Product = () => {
             </div>
             <div className="productTop">
                 <div className="productTopLeft">
-
+                     <Chart
+                     data={productData}
+                     />
                 </div>
                 <div className="productTopRight">
                     <img src="" alt="" className="productInfoImage" />
