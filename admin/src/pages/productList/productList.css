@@ -3,3 +3,35 @@
     background-color:  rgb(64, 1, 122);
     color: "#97979B"  
 }
+.productListProduct {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .productListImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  .productListDelete{
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 5px;
+    color: white;
+    margin: 10px;
+}
+.productListEdit{
+    border: none;
+    border-radius: 50%;
+    padding: 5px 5px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin: 11px;
+    
+}

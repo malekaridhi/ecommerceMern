@@ -60,7 +60,7 @@ const ProductList = () => {
              <div
         style={{
           margin: "20px",
-          height: 490,
+          height: 810,
           width: "97%",
           backgroundColor: "#1e1e1e",
         }}
