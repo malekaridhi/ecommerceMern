@@ -6,14 +6,14 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import image from "../../images/logo5.png"
 import image1 from "../../images/c10.jpg"
 import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 const Topbar = () => {
     return ( <>
      <div className='topbar'>
       <div className="topbarWrapper">
           <div className="topLeft">
-              <img className='logo' src={image}/>
+              <img className='logo' src={image} alt=""/>
           </div>
+          
           <div className="topRight">
               <div className="topbarIconContainer">
                   <NotificationsNoneIcon/>

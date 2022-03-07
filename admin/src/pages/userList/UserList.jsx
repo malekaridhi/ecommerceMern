@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState} from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { UserRows } from "../../dummyData";
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const UserList = () => {
   const [data,setData]= useState(UserRows)
   const handleDelete = (id) =>{
-    setData(data.filter(item=>item.id != id))
+    setData(data.filter(item=>item.id !== id))
   }
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -56,7 +56,7 @@ const UserList = () => {
           )
       }
     },
-    ,
+    
   ];
   return (
     <div className="userList">
