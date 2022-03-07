@@ -5,6 +5,7 @@ const NewUser = () => {
     return ( 
         <div className="newUser">
            <h1 className="userTitle">New User</h1> 
+            <div className="newUserContainer">
            <form  className="newUserForm">
                <div className="newUserItem">
                    <label>Username</label>
@@ -34,11 +35,11 @@ const NewUser = () => {
                    <label>Gender</label>
                    <div className="newUserGender">
                        <input type="radio" name='gender' id='male' value="male" />
-                       <label htmlFor="male">Male</label>
+                       <label for="male">Male</label>
                        <input type="radio" name='gender' id='Female' value="Female" />
-                       <label htmlFor="female">Female</label>
+                       <label for="female">Female</label>
                        <input type="radio" name='gender' id='other' value="other" />
-                       <label htmlFor="other">Other</label>
+                       <label for="other">Other</label>
                    </div>
                </div>
                <div className="newUserItem">
@@ -50,6 +51,7 @@ const NewUser = () => {
                </div>
                <button className="newUserButton">Create</button>
            </form>
+           </div>
         </div>
      );
 }

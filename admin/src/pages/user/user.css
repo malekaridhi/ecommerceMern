@@ -44,7 +44,7 @@
 .userShowTop {
   display: flex;
   align-items: center;
-  color: rgb(117, 116, 116);
+  color:  rgb(155, 151, 151);
 }
 .userShowImg {
   /* width: 40px;
@@ -70,13 +70,13 @@
 .userShowTitle {
   font-size: 14px;
   font-weight: 600;
-  color: rgb(175, 170, 170);
+  color:  rgb(155, 151, 151);
 }
 .userShowInfo {
   display: flex;
   align-items: center;
   margin: 20px 0px;
-  color: rgb(117, 116, 116);
+  color: rgb(155, 151, 151);
 }
 .userShowIcon {
   font-size: 16px !important;
@@ -87,7 +87,7 @@
 .userUpdateTitle {
   font-size: 24px;
   font-weight: 600;
-  color: rgb(117, 116, 116);
+  color: rgb(155, 151, 151);
 }
 .userUpdateForm {
   display: flex;
