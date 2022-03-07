@@ -27,6 +27,8 @@ function App() {
           <Route exact path="/users/:userId" element={<User/>} />
           <Route exact path="/newUser" element={<NewUser/>} />
           <Route exact path="/products" element={<ProductList/>} />
+          {/* <Route exact path="/product/:productId" element={</>} />
+          <Route exact path="/newProduct" element={</>} /> */}
         </Routes>
       </div>
     </Router>
