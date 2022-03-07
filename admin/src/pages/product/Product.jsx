@@ -30,7 +30,19 @@ const Product = () => {
                     <div className="productInfoBottom">
                         <div className="productInfoItem">
                             <span className="productItemKey">id:</span>
-                            <span className="productItemValue">123:</span>
+                            <span className="productItemValue">123</span>
+                        </div>
+                        <div className="productInfoItem">
+                            <span className="productItemKey">sales:</span>
+                            <span className="productItemValue">5123</span>
+                        </div>
+                        <div className="productInfoItem">
+                            <span className="productItemKey">active:</span>
+                            <span className="productItemValue">yes</span>
+                        </div>
+                        <div className="productInfoItem">
+                            <span className="productItemKey">in stock:</span>
+                            <span className="productItemValue">no</span>
                         </div>
                     </div>
                     
