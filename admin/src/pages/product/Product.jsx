@@ -62,7 +62,11 @@ const Product = () => {
         </div>
       </div>
       <div className="productBottom">
-        <div className="productFormLeft"></div>
+        <div className="productFormLeft">
+            <label>ProductName</label>
+            <input type="text" placeholder="White Dress" />
+            <label>In Stock</label>
+        </div>
         <div className="productFormRight"></div>
       </div>
     </div>
