@@ -3,3 +3,9 @@
     padding: 20px;
     background-color: rgb(64, 1, 122);
 }
+.productTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
