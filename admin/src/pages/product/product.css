@@ -50,7 +50,8 @@
     color: rgb(155, 151, 151);
 }
 .productName {
-    font-weight: 600;
+    font-weight: 800;
+    font-size: larger;
 }
 .productInfoBottom {
     margin-top: 10px;
@@ -60,6 +61,7 @@
     width: 150px;
     display: flex;
     justify-content: space-between; 
+    font-size: larger;
 }
 .productItemValue {
     font-weight: 300;
