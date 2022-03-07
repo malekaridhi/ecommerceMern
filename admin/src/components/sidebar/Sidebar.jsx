@@ -22,10 +22,12 @@ const Sidebar = () => {
             <div className="sidebarMenu">
                 <h3 className='sidebarTitle'>Dashboard</h3>
                  <ul className="sidebarList">
+                   <Link to="/" className='link'>
                      <li className="sidebarListItem active">
                        <LineStyleIcon className='sidebarIcon'/>
                        Home
                      </li>
+                     </Link>
                      <li className="sidebarListItem">
                        <TimelineIcon className='sidebarIcon'/>
                        Sales
@@ -37,13 +39,13 @@ const Sidebar = () => {
                  </ul>
                  <h3 className='sidebarTitle'>Quick Menu</h3>
                  <ul className="sidebarList">
-                   <Link to="/users">
+                   <Link to="/users" className='link'>
                      <li className="sidebarListItem ">
                        <PermIdentityIcon className='sidebarIcon' />
                        Users
                      </li>
                      </Link>
-                     <Link to="/products">
+                     <Link to="/products" className='link'>
                      <li className="sidebarListItem">
                        <StorefrontIcon className='sidebarIcon'/>
                        Product
