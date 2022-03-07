@@ -3,6 +3,7 @@ import "./product.css"
 import { Link } from "react-router-dom";
 import Chart from "../../components/charts/Chart";
 import {productData} from "../../dummyData"
+import image from "../../images/c1.jpg"
 const Product = () => {
     return ( 
         <div className="product">
@@ -16,11 +17,23 @@ const Product = () => {
                 <div className="productTopLeft">
                      <Chart
                      data={productData}
+                     dataKey="Sales"
+                     title="Sales Performance"
+                     grid
                      />
                 </div>
                 <div className="productTopRight">
-                    <img src="" alt="" className="productInfoImage" />
-                    <span className="productName">Name</span>
+                    <div className="productInfoTop">
+                        <img src={image} alt="" className="productInfoImage" />
+                        <span className="productName">White Dress</span>
+                    </div>
+                    <div className="productInfoBottom">
+                        <div className="productInfoItem">
+                            <span className="productItemKey">id:</span>
+                            <span className="productItemValue">123:</span>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <div className="productBottom">
