@@ -114,92 +114,92 @@ export const UserData = [
   export const productRows = [
     {
       id: 1,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 2,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 3,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 4,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 5,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 6,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 7,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 8,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 9,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
     {
       id: 10,
-      name: "Apple Airpods",
+      name: "White Dress",
       img:
         `${image1}`,
       stock: 123,
       status: "active",
-      price: "$120.00",
+      price: "400 DT",
     },
   ];

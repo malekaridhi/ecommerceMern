@@ -14,27 +14,27 @@ const ProductList = () => {
       const columns = [
         { field: "id", headerName: "ID", width: 90 },
         {
-          field: "user",
-          headerName: "User",
+          field: "product",
+          headerName: "Product",
           width: 200,
           renderCell: (params) => {
             return (
-              <div className="userListUser">
-                <img className="userListImg" src={params.row.avatar} alt="" />
-                {params.row.username}
+              <div className="productListProducr">
+                <img className="productListImg" src={params.row.img} alt="" />
+                {params.row.name}
               </div>
             );
           },
         },
-        { field: "email", headerName: "Email", width: 200 },
+        { field: "stock", headerName: "Stock", width: 200 },
         {
           field: "status",
           headerName: "Status",
           width: 120,
         },
         {
-          field: "transaction",
-          headerName: "Transaction Volume",
+          field: "price",
+          headerName: "Price ",
           width: 190,
         },
         {
@@ -44,11 +44,11 @@ const ProductList = () => {
           renderCell:(params)=>{
               return(
                   <>
-                  <Link to={"/users/"+params.row.id}>
+                  <Link to={"/product/"+params.row.id}>
               {/* //    <button className="userlistEdit">Edit</button>  */}
-                 <EditIcon className="userListEdit"/>
+                 <EditIcon className="productListEdit"/>
                   </Link>
-                 <DeleteIcon className="userListDelete" onClick={()=>handleDelete(params.row.id)} />
+                 <DeleteIcon className="productListDelete" onClick={()=>handleDelete(params.row.id)} />
                  </>
               )
           }
