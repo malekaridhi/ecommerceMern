@@ -62,12 +62,18 @@ const Product = () => {
         </div>
       </div>
       <div className="productBottom">
+        <form className="productForm">
         <div className="productFormLeft">
-            <label>ProductName</label>
+            <label>Product Name</label>
             <input type="text" placeholder="White Dress" />
             <label>In Stock</label>
+            <select name="inStock" id="idStock">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
         </div>
         <div className="productFormRight"></div>
+          </form>
       </div>
     </div>
   );
