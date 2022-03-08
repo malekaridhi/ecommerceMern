@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Chart from "../../components/charts/Chart";
 import { productData } from "../../dummyData";
 import image from "../../images/c1.jpg";
+import image1 from "../../images/c2.jpg";
+import PublishIcon from '@mui/icons-material/Publish';
 const Product = () => {
   return (
     <div className="product">
@@ -41,7 +43,7 @@ const Product = () => {
               <span className="productItemValue">yes</span>
             </div>
             <div className="productInfoItem">
-              <span className="productItemKey">In stock  </span>
+              <span className="productItemKey">In stock </span>
               <span className="productItemValue">no</span>
             </div>
             {/* <table>
@@ -63,17 +65,27 @@ const Product = () => {
       </div>
       <div className="productBottom">
         <form className="productForm">
-        <div className="productFormLeft">
+          <div className="productFormLeft">
             <label>Product Name</label>
             <input type="text" placeholder="White Dress" />
             <label>In Stock</label>
-            <select name="inStock" id="idStock">
+            <select name="inStock" id="inStock">
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
-        </div>
-        <div className="productFormRight"></div>
-          </form>
+            <label>Active</label>
+            <select name="active" id="active">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div className="productFormRight">
+            <img src={image1} alt="" className="productUploadImg" />
+            <label for="file">
+              <PublishIcon/>
+            </label>
+          </div>
+        </form>
       </div>
     </div>
   );
