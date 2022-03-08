@@ -54,6 +54,10 @@ const Product = () => {
           <div className="productFormLeft">
             <label>Product Name</label>
             <input type="text" placeholder="White Dress" />
+            <label>Product Description</label>
+            <input type="text" placeholder="White Dress" />
+            <label>Price</label>
+            <input type="text" placeholder="400 DT" />
             <label>In Stock</label>
             <select name="inStock" id="inStock">
               <option value="yes">Yes</option>
