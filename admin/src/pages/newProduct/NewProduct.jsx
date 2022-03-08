@@ -5,6 +5,7 @@ const NewPrpduct = () => {
     return ( 
         <div className="newProduct">
              <h1 className="addProductTitle">New Product</h1>
+             <div className="newUserContainer">
       <form className="addProductForm">
         <div className="addProductItem">
           <label>Image</label>
@@ -19,7 +20,7 @@ const NewPrpduct = () => {
           <input
             name="title"
             type="text"
-            placeholder="Apple Airpods"
+            placeholder="White Dress"
            
           />
         </div>
@@ -56,6 +57,7 @@ const NewPrpduct = () => {
           Create
         </button>
       </form>
+               </div>
         </div>
      );
 }

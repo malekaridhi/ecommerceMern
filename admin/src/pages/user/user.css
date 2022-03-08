@@ -110,6 +110,8 @@
   height: 30px;
   /* border-bottom: 1px solid gray; */
   background-color: #292827;
+  color: aliceblue;
+  outline: none;
 }
 .userUpdateRight {
   display: flex;

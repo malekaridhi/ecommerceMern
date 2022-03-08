@@ -89,6 +89,8 @@
   border: none;
   padding: 5px;
   background-color: #292827;
+  color: aliceblue;
+  outline: none;
 }
 .productFormLeft > select {
   margin-bottom: 10px;

@@ -22,10 +22,18 @@
   
   .addProductItem > input {
     padding: 10px;
+    color: aliceblue;
+    background-color: #292827;
+    border: none;
+    outline: none;
   }
   
   .addProductItem > select {
     padding: 10px;
+    background-color: #292827;
+    border: none;
+    outline: none;
+    color: rgb(155, 151, 151);
   }
   
   .addProductButton {
@@ -33,7 +41,7 @@
     padding: 7px 10px;
     border: none;
     border-radius: 10px;
-    background-color: darkblue;
+    background-color: #0090e7;
     color: white;
     font-weight: 600;
     cursor: pointer;
