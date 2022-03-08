@@ -37,7 +37,7 @@ const NewPrpduct = () => {
           <input
             name="price"
             type="number"
-            placeholder="100"
+            placeholder="400"
             
           />
         </div>
