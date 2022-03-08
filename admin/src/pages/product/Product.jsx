@@ -5,7 +5,7 @@ import Chart from "../../components/charts/Chart";
 import { productData } from "../../dummyData";
 import image from "../../images/c1.jpg";
 import image1 from "../../images/c2.jpg";
-import PublishIcon from '@mui/icons-material/Publish';
+import PublishIcon from "@mui/icons-material/Publish";
 const Product = () => {
   return (
     <div className="product">
@@ -46,20 +46,6 @@ const Product = () => {
               <span className="productItemKey">In stock </span>
               <span className="productItemValue">no</span>
             </div>
-            {/* <table>
-              <tr>
-                <th>Id</th>
-                <th>Sales</th>
-                <th>Active</th>
-                <th>In Stock</th>
-              </tr>
-              <tr>
-                <td className="productItemValue" >123</td >
-                <td className="productItemValue">5123</td>
-                <td className="productItemValue">yes</td>
-                <td className="productItemValue">no</td>
-              </tr>
-            </table> */}
           </div>
         </div>
       </div>
@@ -80,10 +66,14 @@ const Product = () => {
             </select>
           </div>
           <div className="productFormRight">
-            <img src={image1} alt="" className="productUploadImg" />
-            <label for="file">
-              <PublishIcon/>
-            </label>
+            <div className="productUpload">
+              <img src={image1} alt="" className="productUploadImg" />
+              <label for="file">
+                <PublishIcon />
+              </label>
+              <input type="file" id="file" style={{ display: "none" }} />
+            </div>
+            <button className="productButton">Update</button>
           </div>
         </form>
       </div>
