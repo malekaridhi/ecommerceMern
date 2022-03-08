@@ -37,62 +37,87 @@
   box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
 }
 .productInfoImage {
-
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;   
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
 }
 .productInfoTop {
-    display: flex;
-    align-items: center;
-    color: rgb(155, 151, 151);
+  display: flex;
+  align-items: center;
+  color: rgb(155, 151, 151);
 }
 .productName {
-    font-weight: 800;
-    font-size: larger;
+  font-weight: 800;
+  font-size: larger;
 }
 .productInfoBottom {
-    margin-top: 10px;
-    color: rgb(155, 151, 151);
+  margin-top: 10px;
+  color: rgb(155, 151, 151);
 }
 .productInfoItem {
-    width: 150px;
-    display: flex;
-    justify-content: space-between; 
-    font-size: larger;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
 }
 .productItemValue {
-    font-weight: 300;
+  font-weight: 300;
 }
 .productBottom {
-
+  padding: 20px;
+  margin: 20px;
+  background-color: #1e1e1e;
+  -webkit-box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
 }
-.productForm{
-
+.productForm {
+  display: flex;
+  justify-content: space-between;
 }
-.productFormLeft{
-
+.productFormLeft {
+  display: flex;
+  flex-direction: column;
 }
-.productFormLeft>label{
-
+.productFormLeft > label {
+  margin-bottom: 10px;
+  color: rgb(155, 151, 151);
 }
-.productFormLeft>input{
-
+.productFormLeft > input {
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px;
+  background-color: #292827;
 }
-.productFormLeft>select{
-
+.productFormLeft > select {
+  margin-bottom: 10px;
+  background-color: #292827;
+  border: none;
+  color: rgb(155, 151, 151);
 }
-.productUploadImg{
-
+.productUploadImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
 }
-.productFormRight{
-
+.productFormRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.productUpload{
-
+.productUpload {
+  display: flex;
+  align-items: center;
 }
-.productButton{
-  
+.productButton {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #0090e7;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }
