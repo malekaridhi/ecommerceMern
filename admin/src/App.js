@@ -13,27 +13,30 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewPrpduct from "./pages/newProduct/NewProduct";
+import Login from "./pages/login/Login";
 function App() {
   return (
     <Router>
-      <Topbar />
-      <div className="container">
-        <Sidebar />
-
-        {/* <div className="others">
-      otherpages
-    </div> */}
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/users" element={<UserList />} />
-          <Route exact path="/users/:userId" element={<User/>} />
-          <Route exact path="/newUser" element={<NewUser/>} />
-          <Route exact path="/products" element={<ProductList/>} />
-          <Route exact path="/product/:productId" element={<Product/>} />
-          <Route exact path="/newProduct" element={<NewPrpduct/>} />
-        </Routes>
-      </div>
+      <Routes>
+      <Route exact path="/login" element={<Login/>} />
+      </Routes>
     </Router>
+    // <Router>
+    //   <Topbar />
+    //   <div className="container">
+    //     <Sidebar />
+    //     <Routes>
+    //       <Route exact path="/" element={<Home />} />
+    //       <Route exact path="/users" element={<UserList />} />
+    //       <Route exact path="/users/:userId" element={<User/>} />
+    //       <Route exact path="/newUser" element={<NewUser/>} />
+    //       <Route exact path="/products" element={<ProductList/>} />
+    //       <Route exact path="/product/:productId" element={<Product/>} />
+    //       <Route exact path="/newProduct" element={<NewPrpduct/>} />
+    //       <Route exact path="/login" element={<Login/>} />
+    //     </Routes>
+    //   </div>
+    // </Router>
   );
 }
 

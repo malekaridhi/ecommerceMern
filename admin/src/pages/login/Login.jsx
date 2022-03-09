@@ -1,33 +1,46 @@
-import React,{useState} from 'react';
-
-
+import React, { useState } from "react";
+import "./login.css";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/reducers/apiReq";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Login = () => {
-    const [user,setUser]=useState("")
-    const [password,setPassword]=useState("")
-     
-    const changeUsername = (e)  => {
-        setUser(e.target.value);
-    }
-    const changePassword = (e)  => {
-        setPassword(e.target.value);
-    }
-    const handleLogin = ()=> {
-        e.preventDefault();
-        // login(dispatch, { username, password });
-    }
-    return ( 
-    <div >
-        <input type="text" 
-        placeholder='username'
-        onChange={changeUsername}
-        />
-         <input type="password" 
-        placeholder='password'
-        onChange={changePassword}
-        />
-        <button onClick={handleLogin}>Login</button>
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const changeUsername = (e) => {
+    setUsername(e.target.value);
+  };
+  const changePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    login(dispatch, { username, password });
+  };
+  return (
+    <div className="login">
+      <div className="wrapper">
+        <form className="loginForm">
+          <h1 className="loginTitle">LOGIN</h1>
+          <input
+            className="inputLogin"
+            type="text"
+            placeholder="username"
+            onChange={changeUsername}
+          />
+          <input
+            className="inputLogin"
+            type="password"
+            placeholder="password"
+            onChange={changePassword}
+          />
+          <button className="buttonLogin" onClick={handleLogin}>
+            Login <ArrowForwardIosIcon className="loginIcon"/>
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-        </div> );
-}
- 
 export default Login;
