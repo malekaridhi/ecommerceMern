@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from "react-redux";
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
-
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "./redux/reducers";
 import { PersistGate } from "redux-persist/integration/react";
 import {
   persistStore,
@@ -22,24 +22,27 @@ const persistConfig = {
   storage,
 };
 
-// const persistedReducer = persistReducer(persistConfig, rootReducer);
+ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 
-// const store = configureStore({
-//   reducer: persistedReducer,
-//   middleware: (getDefaultMiddleware) =>
-//     getDefaultMiddleware({
-//       serializableCheck: {
-//         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-//       },
-//     }),
-// });
-// let persistor = persistStore(store);
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+let persistor = persistStore(store);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+        <App />
+   </PersistGate>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 
