@@ -13,6 +13,7 @@ import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import ReportIcon from '@mui/icons-material/Report';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { Link } from "react-router-dom";
+
 const Sidebar = () => {
     return ( 
         <>
@@ -29,11 +30,11 @@ const Sidebar = () => {
                      </Link>
                      <li className="sidebarListItem">
                        <TimelineIcon className='sidebarIcon'/>
-                       Sales
+                       Analytics
                      </li>
                      <li className="sidebarListItem">
                        <TrendingUpIcon className='sidebarIcon'/>
-                       Home
+                       Sales
                      </li>
                  </ul>
                  <h3 className='sidebarTitle'>Quick Menu</h3>
