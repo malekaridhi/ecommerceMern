@@ -11,6 +11,10 @@ const Login = () => {
     const changePassword = (e)  => {
         setPassword(e.target.value);
     }
+    const handleLogin = ()=> {
+        e.preventDefault();
+        // login(dispatch, { username, password });
+    }
     return ( 
     <div >
         <input type="text" 
@@ -21,7 +25,7 @@ const Login = () => {
         placeholder='password'
         onChange={changePassword}
         />
-        <button>Login</button>
+        <button onClick={handleLogin}>Login</button>
 
         </div> );
 }
