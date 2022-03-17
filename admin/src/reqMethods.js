@@ -1,8 +1,8 @@
 import axios from "axios";
  const BASE_URL = "http://localhost:8000/api/"
- const TOKEN = process.env.REACT_APP_TOKEN
- console.log(JSON.parse(JSON.parse(localStorage.getItem("persist:root")).currentUser))
- console.log(TOKEN)
+ const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken;
+ console.log(JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken);
+ 
  export const publicRequest =  axios.create({
      baseURL:BASE_URL,
  });
