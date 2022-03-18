@@ -19,7 +19,7 @@ function App() {
       </Routes>
       {/* </Router>
     <Router> */}
-      {
+      { admin &&(
         <>
           <Topbar />
           <div className="container">
@@ -35,7 +35,7 @@ function App() {
               <Route exact path="/login" element={<Login />} />
             </Routes>
           </div>
-        </>
+        </>)
       }
     </Router>
   );
