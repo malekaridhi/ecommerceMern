@@ -8,9 +8,14 @@ const WidgetSm = () => {
 
     useEffect(() => {
       const getusers = async () =>{
-          const res = await userRequest.get("user/?new=true")
-          setUsers(res.data)
+          try {
+              const res = await userRequest.get("user/?new=true")
+              setUsers(res.data)
+          } catch (error) {
+              console.log(error);
+          }
       }
+      getusers()
     }, [])
     
     return ( 
