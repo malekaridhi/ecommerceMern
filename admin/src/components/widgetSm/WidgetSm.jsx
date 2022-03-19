@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import "./widgetSm.css"
+import Avatar from '@mui/material/Avatar';
 import image from "../../images/a4.jpg"
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {userRequest} from "../../reqMethods"
