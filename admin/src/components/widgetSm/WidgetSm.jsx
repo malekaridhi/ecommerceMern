@@ -25,12 +25,10 @@ const WidgetSm = () => {
          <ul className="widgetsmList">
              {users.map(user=>(
 
-             <li className="widgetsmItem">
-                 <Avatar src={users.img} alt="" className="widgetsmImg" />
+             <li className="widgetsmItem" key={user.id}>
+                 <Avatar src={user.img} alt="" className="widgetsmImg" />
                   <div className="widgetsmUser">
-                      <span className="widgetsmUsername">Ross Geller</span>
-                      <span className="widgetsmUserTitle">Teacher</span>
-
+                      <span className="widgetsmUsername">{user.username}</span>
                   </div>
                   <button className="widgetsmButton">
                       <VisibilityIcon className='widgetsmIcon'/>
