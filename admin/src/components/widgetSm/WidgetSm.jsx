@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import "./widgetSm.css"
-import Avatar from '@mui/material/Avatar';
 import image from "../../images/a4.jpg"
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import {userRequest} from "../../reqMethods"
+import Avatar from '@mui/material/Avatar';
 const WidgetSm = () => {
     const [users,setUsers] = useState([])
 
@@ -23,6 +23,8 @@ const WidgetSm = () => {
         <div className="widgetsm">
          <span className="widgetsmTitle">New Join Members</span>
          <ul className="widgetsmList">
+             {users.map(user=>(
+
              <li className="widgetsmItem">
                  <Avatar src={users.img} alt="" className="widgetsmImg" />
                   <div className="widgetsmUser">
@@ -35,6 +37,7 @@ const WidgetSm = () => {
                       Display
                   </button>
              </li>
+             ))}
          </ul>
         </div>
      );
