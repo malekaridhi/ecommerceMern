@@ -24,7 +24,7 @@ const WidgetSm = () => {
          <span className="widgetsmTitle">New Join Members</span>
          <ul className="widgetsmList">
              <li className="widgetsmItem">
-                 <img src={users.img} alt="" className="widgetsmImg" />
+                 <Avatar src={users.img} alt="" className="widgetsmImg" />
                   <div className="widgetsmUser">
                       <span className="widgetsmUsername">Ross Geller</span>
                       <span className="widgetsmUserTitle">Teacher</span>
