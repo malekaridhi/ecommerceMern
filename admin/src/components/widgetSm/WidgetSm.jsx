@@ -26,7 +26,7 @@ const WidgetSm = () => {
              {users.map(user=>(
 
              <li className="widgetsmItem" key={user.id}>
-                 <Avatar src={user.img} alt="" className="widgetsmImg" />
+                 <Avatar  className="widgetsmImg" />
                   <div className="widgetsmUser">
                       <span className="widgetsmUsername">{user.username}</span>
                   </div>
