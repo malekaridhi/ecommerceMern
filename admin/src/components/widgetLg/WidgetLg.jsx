@@ -3,6 +3,7 @@ import "./widgetLg.css"
 import image from "../../images/b2.jpg"
 import {userRequest} from "../../reqMethods"
 import Avatar from '@mui/material/Avatar';
+import {format} from "timeago.js"
 const WidgetLg = () => {
      const [orders,setOrders] = useState([])
 
@@ -30,15 +31,18 @@ const WidgetLg = () => {
                        <th className="widgetLgTh">Amount</th>
                        <th className="widgetLgTh">Status</th>    
                   </tr>
-                    <tr className="widgetLgTr">
+                  {orders.map(order=>(
+
+                       <tr className="widgetLgTr">
                          <td className="widgetLgUser">
-                              <img src={image} alt="" className="widgetLgImg" />
-                              <span className="widgetLgName">Phebee Bufee</span>
+                              
+                              <span className="widgetLgName">{order.userId}</span>
                          </td>
-                         <td className="widgetLgDate">24 Feb 2022</td>
-                         <td className="widgetLgAmount">500 DT</td>
-                         <td className="widgetLgStatus"><Button type="Approved"/></td>
+                         <td className="widgetLgDate">{format(order.createdAt)}</td>
+                         <td className="widgetLgAmount">{order.amount}</td>
+                         <td className="widgetLgStatus"><Button type={order.status}/></td>
                     </tr>
+                         ))}
                   
              </table>
         </div>
