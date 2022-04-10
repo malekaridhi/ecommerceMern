@@ -25,7 +25,7 @@ const WidgetSm = () => {
          <ul className="widgetsmList">
              {users.map(user=>(
 
-             <li className="widgetsmItem" key={user.id}>
+             <li className="widgetsmItem" key={user._id}>
                  <Avatar  className="widgetsmImg" />
                   <div className="widgetsmUser">
                       <span className="widgetsmUsername">{user.username}</span>

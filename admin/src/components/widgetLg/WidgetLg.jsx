@@ -25,6 +25,8 @@ const WidgetLg = () => {
         <div className="widgetLg">
              <h3 className="widgetLgTitle">Latest Transactions</h3>
              <table className="widgetLgTable">
+                <tbody>
+
                   <tr className="widgetLTr">
                        <th className="widgetLgTh">Customer</th>
                        <th className="widgetLgTh">Date</th>
@@ -32,8 +34,8 @@ const WidgetLg = () => {
                        <th className="widgetLgTh">Status</th>    
                   </tr>
                   {orders.map(order=>(
-
-                       <tr className="widgetLgTr">
+                       
+                       <tr className="widgetLgTr" key={order._id} >
                          <td className="widgetLgUser">
                               
                               <span className="widgetLgName">{order.userId}</span>
@@ -44,6 +46,7 @@ const WidgetLg = () => {
                     </tr>
                          ))}
                   
+                         </tbody>
              </table>
         </div>
      );
