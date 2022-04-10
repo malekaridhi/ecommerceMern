@@ -14,7 +14,7 @@ const FeaturedInfo = () => {
         try {
             const res = await userRequest.get("orders/income")
             setIncome(res.data)
-            // setPerce((res.data[1].total*100)/res.data[0].total)
+             setPerce((res.data[1].total * 100) / res.data[0].total - 100);
         } catch (error) {
           console.log(error);  
         }
@@ -31,8 +31,13 @@ const FeaturedInfo = () => {
                   </span>
                   <div className="featuredMoneyContainer">
                       <span className="featuredMoney"> {income[1]?.total} DT</span>
-                      <span className="featuredMoneyRate">%{perce}
+                      <span className="featuredMoneyRate">%{Math.floor(perce)} {" "}
+                      {perce < 0 ? (
                        <ArrowDownwardIcon className='featuredIcon negative'/>
+                       ) : (
+                        <ArrowUpwardIcon className="featuredIcon positive
+                        " />
+                        )}
                       </span>
                   </div>
                        <span className="featuredSub">Cpmpared to last month</span>
