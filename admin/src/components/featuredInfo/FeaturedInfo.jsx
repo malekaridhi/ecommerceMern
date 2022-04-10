@@ -5,6 +5,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { userRequest } from '../../reqMethods';
 const FeaturedInfo = () => {
     const [income,setIncome]=useState([])
+    const [perce,setPerce]=useState(0)
     
     
     
@@ -13,13 +14,15 @@ const FeaturedInfo = () => {
         try {
             const res = await userRequest.get("orders/income")
             setIncome(res.data)
+            // setPerce((res.data[1].total*100)/res.data[0].total)
         } catch (error) {
           console.log(error);  
         }
      }
      getIncome()
     }, [])
-    console.log(income);
+    console.log(income)
+    
     return ( 
         <div className='featured'>
               <div className="featuredItem">
@@ -27,8 +30,8 @@ const FeaturedInfo = () => {
                       Revenue
                   </span>
                   <div className="featuredMoneyContainer">
-                      <span className="featuredMoney">250 DT</span>
-                      <span className="featuredMoneyRate">-11.4
+                      <span className="featuredMoney"> {income[1]?.total} DT</span>
+                      <span className="featuredMoneyRate">%{perce}
                        <ArrowDownwardIcon className='featuredIcon negative'/>
                       </span>
                   </div>
