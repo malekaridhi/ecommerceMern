@@ -95,7 +95,7 @@ try {
         {
             $group: {
                 _id: "$month",
-                total: {$sum:1},
+                totalx: {$sum:1},
             }
         }
     ]);

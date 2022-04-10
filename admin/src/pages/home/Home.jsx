@@ -46,7 +46,7 @@ const Home = () => {
   return <div className="home">
       <FeaturedInfo/>
       <Chart
-        data={UserData}
+        data={userStats}
         title="User Analytics"
         grid
         dataKey="Active User"
