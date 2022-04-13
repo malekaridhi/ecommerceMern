@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import "./productList.css"
 import { DataGrid } from "@mui/x-data-grid";
 import { productRows } from "../../dummyData";
@@ -6,8 +6,15 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
 import {getProduct} from "../../redux/reducers/apiReq"
+import {useDispatch} from "react-redux"
 const ProductList = () => {
     const [data,setData]= useState(productRows)
+
+useEffect(() => {
+
+}, [])
+
+
     const handleDelete = (id) =>{
         setData(data.filter(item=>item.id !== id))
       }
