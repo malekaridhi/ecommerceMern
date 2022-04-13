@@ -5,7 +5,7 @@ import { productRows } from "../../dummyData";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
-
+import {getProduct} from "../../redux/reducers/apiReq"
 const ProductList = () => {
     const [data,setData]= useState(productRows)
     const handleDelete = (id) =>{

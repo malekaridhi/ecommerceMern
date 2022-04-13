@@ -31,7 +31,7 @@ app.use('/api/product', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/checkout', stripeRoutes);
-
+  
 mongoose.connect(
     process.env.MONGODB_CONNECTION_STRING,
     {
