@@ -72,6 +72,9 @@ export const {
     startGetttingProduct,
     successGettingProduct,
     failingGettingProduct,
+    startDeletingProduct,
+    successDeletingProduct,
+    failingdeletingProduct,
 } = productSlice.actions;
 
 export default productSlice.reducer;
