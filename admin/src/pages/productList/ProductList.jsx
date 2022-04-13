@@ -12,7 +12,7 @@ const ProductList = () => {
 
   const dispatch = useDispatch()
   const products = useSelector(state=>state.product.products)
-  console.log(products)
+
   useEffect(() => {
     getProduct(dispatch);
   }, [dispatch]);
@@ -21,26 +21,22 @@ const ProductList = () => {
     setData(data.filter((item) => item.id !== id));
   };
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "_id", headerName: "ID", width: 210 },
     {
       field: "product",
       headerName: "Product",
-      width: 200,
+      width: 230,
       renderCell: (params) => {
         return (
           <div className="productListProducr">
             <img className="productListImg" src={params.row.img} alt="" />
-            {params.row.name}
+            {params.row.title}
           </div>
         );
       },
     },
-    { field: "stock", headerName: "Stock", width: 200 },
-    {
-      field: "status",
-      headerName: "Status",
-      width: 120,
-    },
+    { field: "inStock", headerName: "Stock", width: 200 },
+    
     {
       field: "price",
       headerName: "Price ",
@@ -81,11 +77,12 @@ const ProductList = () => {
             paging: false,
           }}
           style={{ color: "rgb(155, 151, 151)" }}
-          rows={data}
+          rows={products}
           columns={columns}
           disableSelectionOnClick
+          getRowId={(row)=>row._id}
           pageSize={8}
-          rowsPerPageOptions={[10]}
+          // rowsPerPageOptions={[100]}
           checkboxSelection
         />
       </div>
