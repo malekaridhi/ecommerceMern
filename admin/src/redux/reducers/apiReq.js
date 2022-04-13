@@ -17,8 +17,8 @@ export const login = async(dispatch, user) =>{
 export const getProduct = async(dispatch) =>{
     dispatch(startGetttingProduct());
     try {
-        const res = await publicRequest.post("/auth/products");
-        console.log(res.data)
+        const res = await publicRequest.get("/product");
+        console.log("this shitty",res.data)
         dispatch(successGettingProduct(res.data))
     } catch (error) {
         dispatch(failingGettingProduct())
