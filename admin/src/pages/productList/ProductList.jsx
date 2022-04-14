@@ -5,10 +5,10 @@ import { productRows } from "../../dummyData";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
-import { getProduct } from "../../redux/reducers/apiReq";
+import { deleteProduct, getProduct } from "../../redux/reducers/apiReq";
 import { useDispatch,useSelector } from "react-redux";
 const ProductList = () => {
-  const [data, setData] = useState(productRows);
+  // const [data, setData] = useState(productRows);
 
   const dispatch = useDispatch()
   const products = useSelector(state=>state.product.products)
@@ -18,7 +18,8 @@ const ProductList = () => {
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
+    // setData(data.filter((item) => item.id !== id));
+     deleteProduct(id,dispatch)
   };
   const columns = [
     { field: "_id", headerName: "ID", width: 210 },
@@ -49,13 +50,13 @@ const ProductList = () => {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/product/" + params.row.id}>
+            <Link to={"/product/" + params.row._id}>
               {/* //    <button className="userlistEdit">Edit</button>  */}
               <EditIcon className="productListEdit" />
             </Link>
             <DeleteIcon
               className="productListDelete"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row._id)}
             />
           </>
         );
@@ -67,7 +68,7 @@ const ProductList = () => {
       <div
         style={{
           margin: "20px",
-          height: 810,
+          height: 540,
           width: "97%",
           backgroundColor: "#1e1e1e",
         }}
