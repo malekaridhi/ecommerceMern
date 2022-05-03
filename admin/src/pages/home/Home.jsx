@@ -6,6 +6,9 @@ import {UserData} from "../../dummyData"
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { userRequest } from "../../reqMethods";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
+
 const Home = () => {
   const [userStats,setUserStats]=useState([])
   const MONTHS = useMemo(
@@ -43,7 +46,10 @@ const Home = () => {
   }, [MONTHS])
  
   // console.log(userStats);
-  return <div className="home">
+  return ( 
+  <>  
+  
+  <div className="container"> <Sidebar />  <div className="home">
       <FeaturedInfo/>
       <Chart
         data={userStats}
@@ -55,7 +61,9 @@ const Home = () => {
            <WidgetSm/>
            <WidgetLg/>
       </div>
-  </div>;
+  </div>
+  </div>
+  </>);
 };
 
 export default Home;
