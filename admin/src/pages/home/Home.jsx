@@ -48,8 +48,10 @@ const Home = () => {
   // console.log(userStats);
   return ( 
   <>  
-  
-  <div className="container"> <Sidebar />  <div className="home">
+  <Topbar/>
+  <div className="container"> 
+  <Sidebar />  
+  <div className="home">
       <FeaturedInfo/>
       <Chart
         data={userStats}

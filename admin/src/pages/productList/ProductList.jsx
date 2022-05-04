@@ -7,6 +7,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import { Link } from "react-router-dom";
 import { deleteProduct, getProduct } from "../../redux/reducers/apiReq";
 import { useDispatch,useSelector } from "react-redux";
+import Topbar from "../../components/topbar/Topbar";
+import Sidebar from "../../components/sidebar/Sidebar";
 const ProductList = () => {
   // const [data, setData] = useState(productRows);
 
@@ -64,6 +66,10 @@ const ProductList = () => {
     },
   ];
   return (
+    <>
+    <Topbar/>
+    <div className="container">
+    <Sidebar/>
     <div className="productList">
       <div
         style={{
@@ -72,7 +78,7 @@ const ProductList = () => {
           width: "97%",
           backgroundColor: "#1e1e1e",
         }}
-      >
+        >
         <DataGrid
           options={{
             paging: false,
@@ -85,9 +91,11 @@ const ProductList = () => {
           pageSize={8}
           // rowsPerPageOptions={[100]}
           checkboxSelection
-        />
+          />
       </div>
     </div>
+          </div>
+          </>
   );
 };
 

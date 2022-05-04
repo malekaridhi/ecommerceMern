@@ -34,7 +34,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
         res.status(403).json("You are not alowed to do that!");
       }
     });
-  };
+  };  
 
 
 

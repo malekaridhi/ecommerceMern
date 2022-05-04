@@ -14,26 +14,26 @@ import ProtectedRoutes from "./ProtectedRoutes";
 function App() {
   const admin = JSON.parse(
     JSON.parse(localStorage.getItem("persist:root")).user
-  ).currentUser.isAdmin;
-  console.log(admin);
+  ).currentUser;
+  console.log(admin && admin.isAdmin);
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/login" element={<Login />} />
-      </Routes>
-            
-          <Topbar />
-            <Routes>
-              <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Login />} />    
+          {/* <Topbar /> */}
+            <Route element={<ProtectedRoutes/>}>
+              <Route exact path="/home" element={<Home />} />
               <Route exact path="/users" element={<UserList />} />
               <Route exact path="/users/:userId" element={<User />} />
               <Route exact path="/newUser" element={<NewUser />} />
               <Route exact path="/products" element={<ProductList />} />
               <Route exact path="/product/:productId" element={<Product />} />
               <Route exact path="/newProduct" element={<NewPrpduct />} />
-              <Route exact path="/login" element={<Login />} />
+              </Route>
             </Routes>
     </Router>
+
   //   <Router>
   //   <Routes>
   //     <Route exact path="/login" element={<Login />} />

@@ -3,10 +3,13 @@ import "./login.css";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/reducers/apiReq";
 import {useSelector} from "react-redux"
+import { useNavigate } from 'react-router-dom';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  let navigate = useNavigate();
+  let [error, setError] =useState(null);
   const dispatch = useDispatch();
   const state = useSelector(state=>state)
   console.log(state)
@@ -18,7 +21,13 @@ const Login = () => {
   };
   const handleLogin = (e) => {
     e.preventDefault();
-    login(dispatch, { username, password });
+    try {
+      login(dispatch, { username, password });
+    } catch (error) {
+      
+    }
+    navigate('/');
+    
   };
   return (
     <div className="login">

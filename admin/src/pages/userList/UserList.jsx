@@ -5,10 +5,8 @@ import { UserRows } from "../../dummyData";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
-
-
-
-
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
 const UserList = () => {
   const [data,setData]= useState(UserRows)
   const handleDelete = (id) =>{
@@ -59,6 +57,10 @@ const UserList = () => {
     
   ];
   return (
+    <>
+    <Topbar/>
+    <div className="container">
+      <Sidebar />  
     <div className="userList">
       <div
         style={{
@@ -83,6 +85,8 @@ const UserList = () => {
         />
       </div>
     </div>
+    </div>
+    </>
   );
 };
 

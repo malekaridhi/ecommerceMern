@@ -1,8 +1,13 @@
 import React from 'react';
 import "./newProduct.css"
-
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
 const NewPrpduct = () => {
     return ( 
+      <>
+      <Topbar/>
+      <div className='container'>
+      <Sidebar/>
         <div className="newProduct">
              <h1 className="addProductTitle">New Product</h1>
              <div className="newUserContainer">
@@ -13,7 +18,7 @@ const NewPrpduct = () => {
             type="file"
             id="file"
             
-          />
+            />
         </div>
         <div className="addProductItem">
           <label>Title</label>
@@ -21,8 +26,8 @@ const NewPrpduct = () => {
             name="title"
             type="text"
             placeholder="White Dress"
-           
-          />
+            
+            />
         </div>
         <div className="addProductItem">
           <label>Description</label>
@@ -59,6 +64,8 @@ const NewPrpduct = () => {
       </form>
                </div>
         </div>
+            </div>
+            </>
      );
 }
  

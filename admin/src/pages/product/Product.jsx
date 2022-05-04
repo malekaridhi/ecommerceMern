@@ -8,6 +8,8 @@ import image1 from "../../images/c2.jpg";
 import PublishIcon from "@mui/icons-material/Publish";
 import { useSelector } from "react-redux";
 import { userRequest } from "../../reqMethods";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
 const Product = () => {
   const location = useLocation();
   const productId = location.pathname.split("/")[2];
@@ -52,6 +54,10 @@ const Product = () => {
     getStats();
   }, [productId, MONTHS]);
   return (
+    <>
+    <Topbar/>
+    <div className="container">
+     <Sidebar/>
     <div className="product">
       <div className="productTitleContainer">
         <h1 className="productTitle">Product</h1>
@@ -118,6 +124,8 @@ const Product = () => {
         </form>
       </div>
     </div>
+            </div>
+    </>
   );
 };
 

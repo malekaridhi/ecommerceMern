@@ -10,9 +10,14 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import PublishIcon from "@mui/icons-material/Publish";
 import { Link } from "react-router-dom";
-
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
 const User = () => {
   return (
+    <>
+    <Topbar/>
+    <div className="container">
+     <Sidebar/>
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
@@ -73,7 +78,7 @@ const User = () => {
                   type="text"
                   className="userUpdateInput"
                   placeholder="Rachel Green"
-                />
+                  />
               </div>
               <div className="userUpdateItem">
                 <label>Email</label>
@@ -81,7 +86,7 @@ const User = () => {
                   type="text"
                   className="userUpdateInput"
                   placeholder="rachelgreen888@gmail.com"
-                />
+                  />
               </div>
               <div className="userUpdateItem">
                 <label>Phone</label>
@@ -89,7 +94,7 @@ const User = () => {
                   type="text"
                   className="userUpdateInput"
                   placeholder="+216 20 555 555"
-                />
+                  />
               </div>
               <div className="userUpdateItem">
                 <label>Adress</label>
@@ -97,7 +102,7 @@ const User = () => {
                   type="text"
                   className="userUpdateInput"
                   placeholder="Tunis | Tunisia"
-                />
+                  />
               </div>
               
             </div>
@@ -114,7 +119,9 @@ const User = () => {
               <button className="userUpdateButton">Update</button>
         </div>
       </div>
+                  </div>
     </div>
+      </>
   );
 };
 
