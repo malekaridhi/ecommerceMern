@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import "./newProduct.css"
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
@@ -25,7 +25,7 @@ const NewPrpduct = () => {
           <input
             name="title"
             type="text"
-            placeholder="White Dress"
+            placeholder="Title..."
             
             />
         </div>
@@ -43,14 +43,14 @@ const NewPrpduct = () => {
           <input
             name="price"
             type="number"
-            placeholder="400"
+            placeholder="DT"
             
           />
         </div>
-        <div className="addProductItem">
+        {/* <div className="addProductItem">
           <label>Categories</label>
           <input type="text" placeholder="jeans,skirts"  />
-        </div>
+        </div> */}
         <div className="addProductItem">
           <label>Stock</label>
           <select name="inStock">

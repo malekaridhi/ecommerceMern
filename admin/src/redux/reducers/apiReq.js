@@ -6,6 +6,13 @@ import {
   startDeletingProduct,
   successDeletingProduct,
   failingdeletingProduct,
+  startUpdatingProduct,
+  successUpdatingProduct,
+  failingUpdatingProduct,
+  startAddingProduct,
+  successAddingProduct,
+  failureAddingProduct
+
 } from "../productRedux";
 import { publicRequest, userRequest } from "../../reqMethods";
 
@@ -34,9 +41,28 @@ export const getProduct = async (dispatch) => {
 export const deleteProduct = async (id, dispatch) => {
   dispatch(startDeletingProduct());
   try {
-    //   const res = await userRequest.delete(`/products/${id}`);
+      const res = await userRequest.delete(`/products/${id}`);
     dispatch(successDeletingProduct(id));
   } catch (err) {
     dispatch(failingdeletingProduct());
+  }
+};
+export const updateProduct = async (id,product, dispatch) => {
+  dispatch(startUpdatingProduct());
+  try {
+    const res = await userRequest.put(`/products/${id}`, product);
+    console.log(res.data)
+    dispatch(successUpdatingProduct({id,product}));
+  } catch (err) {
+    dispatch(failingUpdatingProduct());
+  }
+};
+export const AddProduct = async (product, dispatch) => {
+  dispatch(startAddingProduct());
+  try {
+    const res = await userRequest.post(`/products`, product);
+    dispatch(successAddingProduct(res.data));
+  } catch (err) {
+    dispatch(failureAddingProduct());
   }
 };
