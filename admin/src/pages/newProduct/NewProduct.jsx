@@ -2,7 +2,31 @@ import React,{useState,useEffect} from 'react';
 import "./newProduct.css"
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
+import axios from 'axios';
 const NewPrpduct = () => {
+  const [inputs, setInputs] = useState({});
+  const [image, setPicture] = useState("");
+  const [loading, setLoading] = useState(false);
+  const onImageChange = (e)=>{
+    const files = e.target.files[0];
+    const formData = new FormData();
+    formData.append("upload_preset", "ktzq171m");
+    formData.append("file", files);
+    setLoading(true);
+    axios
+      .post("	https://api.cloudinary.com/v1_1/dvl9yijld/image/upload", formData)
+      .then((res) => {
+        setPicture(res.data.secure_url);
+        console.log("image", image);
+      })
+      .then(setLoading(false))
+      .catch((err) => console.log(err));
+  }
+  const handleChange = (e) => {
+    setInputs((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
     return ( 
       <>
       <Topbar/>
@@ -17,7 +41,7 @@ const NewPrpduct = () => {
           <input
             type="file"
             id="file"
-            
+            onChange={onImageChange} 
             />
         </div>
         <div className="addProductItem">
