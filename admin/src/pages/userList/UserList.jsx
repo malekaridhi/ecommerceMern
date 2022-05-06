@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { UserRows } from "../../dummyData";
@@ -7,8 +7,16 @@ import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
+import { useDispatch,useSelector } from "react-redux";
+import { getUser,deleteUser } from "../../redux/reducers/apiReq";
 const UserList = () => {
   const [data,setData]= useState(UserRows)
+  const dispatch = useDispatch()
+  const users = useSelector(state=>state.user)
+  useEffect(() => {
+    getUser(dispatch);
+  }, [dispatch]);
+  console.log(users);
   const handleDelete = (id) =>{
     setData(data.filter(item=>item.id !== id))
   }

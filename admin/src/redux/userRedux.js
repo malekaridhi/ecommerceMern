@@ -3,9 +3,9 @@ const userSlice = createSlice({
     name: "user",
     initialState: {
       currentUser: null,
-      users:[],
       isFetching:false,
       error: false,
+      users:[],
     },
     reducers: {
       startLogin: (state ) => {
@@ -20,64 +20,65 @@ const userSlice = createSlice({
         state.error = true;
       },
        //GET ALL
-    startGetttingProduct: (state) => {
+    startGetttingUser: (state) => {
       state.isFetching = true;
       state.error = false;
     },
-    successGettingProduct: (state, action) => {
+    successGettingUser: (state, action) => {
       state.isFetching = false;
-      state.products = action.payload;
+      state.users = action.payload;
     },
-    failingGettingProduct: (state) => {
+    failingGettingUser: (state) => {
       state.isFetching = false;
       state.error = true;
     },
     //DELETE
-    startDeletingProduct: (state) => {
+    startDeletingUser: (state) => {
       state.isFetching = true;
       state.error = false;
     },
-    successDeletingProduct: (state, action) => {
+    successDeletingUser: (state, action) => {
       state.isFetching = false;
-      state.products.splice(
-        state.products.findIndex((item) => item._id === action.payload),
+      state.users.splice(
+        state.users.findIndex((item) => item._id === action.payload),
         1
       );
     },
-    failingdeletingProduct: (state) => {
+    failingdeletingUser: (state) => {
       state.isFetching = false;
       state.error = true;
     },
     //UPDATE
-    startUpdatingProduct: (state) => {
+    startUpdatingUser: (state) => {
       state.isFetching = true;
       state.error = false;
     },
-    successUpdatingProduct: (state, action) => {
+    successUpdatingUser: (state, action) => {
       state.isFetching = false;
-      state.products[
-        state.products.findIndex((item) => item._id === action.payload.id)
-      ] = action.payload.product;
+      state.users[
+        state.users.findIndex((item) => item._id === action.payload.id)
+      ] = action.payload.user;
     },
-    failingUpdatingProduct: (state) => {
-      state.isFetching = false;
-      state.error = true;
-    },
-    //ADD
-    addProductStart: (state) => {
-      state.isFetching = true;
-      state.error = false;
-    },
-    addProductSuccess: (state, action) => {
-      state.isFetching = false;
-      state.products.push(action.payload);
-    },
-    addProductFailure: (state) => {
+    failingUpdatingUser: (state) => {
       state.isFetching = false;
       state.error = true;
     },
+   
     },
   });
   
-  export const { startLogin, successLogin, faledLogin } = userSlice.actions;
+  export const { startLogin, 
+    successLogin,
+     faledLogin,
+     startGetttingUser,
+     successGettingUser,
+     failingGettingUser,
+     startDeletingUser,
+     successDeletingUser,
+     failingdeletingUser,
+     startUpdatingUser,
+     successUpdatingUser,
+     failingUpdatingUser,
+     
+    } = userSlice.actions;
   export default userSlice.reducer;

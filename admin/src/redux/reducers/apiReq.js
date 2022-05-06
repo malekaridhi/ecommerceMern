@@ -15,8 +15,23 @@ import {
   addProductStart,
   addProductSuccess,
   addProductFailure,
+  
+  
+
+
 
 } from "../productRedux";
+import { 
+  startGetttingUser,
+  successGettingUser,
+  failingGettingUser,
+  startDeletingUser,
+  successDeletingUser,
+  failingdeletingUser,
+  startUpdatingUser,
+  successUpdatingUser,
+  failingUpdatingUser,
+   } from "../userRedux";
 import { publicRequest, userRequest } from "../../reqMethods";
 
 export const login = async (dispatch, user) => {
@@ -72,3 +87,36 @@ export const addProduct = async ( dispatch,product) => {
     console.log(err)
   }
 };
+///*******************************users****************************************
+export const getUser = async (dispatch) => {
+  dispatch(startGetttingUser());
+  try {
+    const res = await publicRequest.get("/user");
+    console.log("this shitty", res.data);
+    dispatch(successGettingUser(res.data));
+  } catch (error) {
+    dispatch(failingGettingUser());
+  }
+};
+
+export const deleteUser = async (id, dispatch) => {
+  dispatch(startDeletingUser());
+  try {
+      const res = await userRequest.delete(`/user/${id}`);
+    dispatch(successDeletingUser(id));
+  } catch (err) {
+    dispatch(failingdeletingUser());
+  }
+};
+export const updateUser = async (id,user,dispatch) => {
+  dispatch(startUpdatingUser());
+  try {
+    const res = await userRequest.put(`/user/${id}`, user);
+    console.log(res.data)
+    dispatch(successUpdatingUser(res.data));
+  } catch (err) {
+    dispatch(failingUpdatingUser());
+    console.log(err)
+  }
+};
+
