@@ -3,10 +3,17 @@ import "./newProduct.css"
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../redux/reducers/apiReq';
+import {useSelector} from "react-redux"
 const NewPrpduct = () => {
   const [inputs, setInputs] = useState({});
   const [image, setPicture] = useState("");
   const [loading, setLoading] = useState(false);
+  const [cat, setCat] = useState([]);
+  const dispatch = useDispatch()
+  const state = useSelector(state=>state)
+  console.log(state)
   const onImageChange = (e)=>{
     const files = e.target.files[0];
     const formData = new FormData();
@@ -27,6 +34,17 @@ const NewPrpduct = () => {
       return { ...prev, [e.target.name]: e.target.value };
     });
   };
+  const handleCat = (e) => {
+    setCat(e.target.value.split(","));
+  };
+  const handleClick =(e)=>{
+    e.preventDefault();
+    const product = { ...inputs, img: image, categories: cat };
+    
+    addProduct(dispatch,product);
+    console.log(product)
+  }
+  console.log(inputs,image);
     return ( 
       <>
       <Topbar/>
@@ -43,6 +61,11 @@ const NewPrpduct = () => {
             id="file"
             onChange={onImageChange} 
             />
+              {loading ? (
+              <h1>Loading</h1>
+            ) : (
+              <img src={image} alt="" className='loading'/>
+            )}
         </div>
         <div className="addProductItem">
           <label>Title</label>
@@ -50,7 +73,7 @@ const NewPrpduct = () => {
             name="title"
             type="text"
             placeholder="Title..."
-            
+            onChange={handleChange}
             />
         </div>
         <div className="addProductItem">
@@ -59,7 +82,7 @@ const NewPrpduct = () => {
             name="desc"
             type="text"
             placeholder="description..."
-            
+            onChange={handleChange}
           />
         </div>
         <div className="addProductItem">
@@ -68,24 +91,25 @@ const NewPrpduct = () => {
             name="price"
             type="number"
             placeholder="DT"
-            
+            onChange={handleChange}
           />
         </div>
-        {/* <div className="addProductItem">
+        <div className="addProductItem">
           <label>Categories</label>
-          <input type="text" placeholder="jeans,skirts"  />
-        </div> */}
+          <input type="text" placeholder="jeans,skirts"  onChange={handleCat}  />
+        </div>
         <div className="addProductItem">
           <label>Stock</label>
-          <select name="inStock">
+          <select name="inStock"  onChange={handleChange}> 
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
         </div>
-        <button  className="addProductButton">
+        <button  className="addProductButton" onClick={handleClick}>
           Create
         </button>
       </form>
+        
                </div>
         </div>
             </div>
