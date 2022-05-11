@@ -20,6 +20,7 @@ const UserList = () => {
   console.log(users);
   const handleDelete = (id) =>{
     // setData(data.filter(item=>item.id !== id))
+    deleteUser(id,dispatch)
   }
   const columns = [
     { field: "_id", headerName: "ID", width: 90 },
