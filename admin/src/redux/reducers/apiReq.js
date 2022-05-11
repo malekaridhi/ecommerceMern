@@ -39,7 +39,7 @@ export const login = async (dispatch, user) => {
   try {
     const res = await publicRequest.post("/auth/login", user);
     // console.log(res.data);
-    
+    window.location.href = '/home'
     dispatch(successLogin(res.data));
   } catch (error) {
     dispatch(faledLogin());

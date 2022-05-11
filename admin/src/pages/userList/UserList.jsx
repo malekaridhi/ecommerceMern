@@ -9,19 +9,20 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import { useDispatch,useSelector } from "react-redux";
 import { getUser,deleteUser } from "../../redux/reducers/apiReq";
+import Avatar from '@mui/material/Avatar';
 const UserList = () => {
-  const [data,setData]= useState(UserRows)
+  // const [data,setData]= useState(UserRows)
   const dispatch = useDispatch()
-  const users = useSelector(state=>state.user)
+  const users = useSelector(state=>state.user.users)
   useEffect(() => {
     getUser(dispatch);
   }, [dispatch]);
   console.log(users);
   const handleDelete = (id) =>{
-    setData(data.filter(item=>item.id !== id))
+    // setData(data.filter(item=>item.id !== id))
   }
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "_id", headerName: "ID", width: 90 },
     {
       field: "user",
       headerName: "User",
@@ -29,7 +30,7 @@ const UserList = () => {
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.avatar} alt="" />
+            <Avatar  className="userListImg" src={params.row.img} ></Avatar>
             {params.row.username}
           </div>
         );
@@ -53,11 +54,11 @@ const UserList = () => {
       renderCell:(params)=>{
           return(
               <>
-              <Link to={"/users/"+params.row.id}>
+              <Link to={"/users/"+params.row._id}>
           {/* //    <button className="userlistEdit">Edit</button>  */}
              <EditIcon className="userListEdit"/>
               </Link>
-             <DeleteIcon className="userListDelete" onClick={()=>handleDelete(params.row.id)} />
+             <DeleteIcon className="userListDelete" onClick={()=>handleDelete(params.row._id)} />
              </>
           )
       }
@@ -83,12 +84,12 @@ const UserList = () => {
             paging: false
         }}
           style={{ color: "rgb(155, 151, 151)" }}
-          rows={data}
+          rows={users}
           columns={columns}
           disableSelectionOnClick
           pageSize={8}
          rowsPerPageOptions={[10]}
-         
+         getRowId={(row)=>row._id}
           checkboxSelection
         />
       </div>
