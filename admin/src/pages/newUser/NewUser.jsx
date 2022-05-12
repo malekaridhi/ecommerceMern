@@ -2,6 +2,9 @@ import React from "react";
 import "./newUser.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
+import {useSelector} from "react-redux";
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
 
 const NewUser = () => {
   return (
